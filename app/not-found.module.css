@@ -1,0 +1,65 @@
+.page {
+  min-height: 100svh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px 24px;
+  background: linear-gradient(135deg, #e8e0d0, #f8f5ef 60%, #eee7db);
+  color: #252724;
+  text-align: center;
+  font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+}
+.brand {
+  color: inherit;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.1;
+}
+.brand span {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.content { margin: auto 0; padding: 48px 0 64px; max-width: 620px; }
+.code {
+  margin: 0;
+  color: #75664e;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(104px, 16vw, 168px);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.04em;
+}
+.english { margin: 16px 0 36px; font-size: 13px; letter-spacing: 0.2em; }
+.content h1 { margin: 0; font-size: clamp(19px, 3vw, 25px); font-weight: 500; line-height: 1.6; }
+.description { margin: 20px 0 32px; color: #535650; font-size: 14px; line-height: 2; }
+.back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  min-height: 52px;
+  box-sizing: border-box;
+  padding: 12px 28px;
+  border: 1px solid #252724;
+  border-radius: 999px;
+  background: #252724;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.back:hover { background: #42463f; }
+.back:focus-visible, .brand:focus-visible { outline: 3px solid #005fcc; outline-offset: 5px; }
+.footer { margin: 0; color: #616359; font-size: 11px; letter-spacing: 0.06em; }
+@media (max-width: 480px) {
+  .page { padding-top: 28px; }
+  .desktopBreak { display: none; }
+  .content { padding: 40px 0; }
+}

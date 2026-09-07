@@ -1,13 +1,23 @@
 {
-  "comment": "ページ構成の唯一のソース。上から順に積む。pc/sp は docs/slices.json の切り出し名（<frame>_<nn>_<name>）。unit は thoughts/plans の §5 レビュー単位。id はメニュー（lib/menu.ts）のリンク先にもなる: top / campaign / session / trial-flow / plan / instructor / facility / faq / access。",
+  "comment": "ページ構成の唯一のソース。上から順に積む。pc/sp は docs/slices.json の切り出し名（<frame>_<nn>_<name>）。unit は thoughts/plans の §5 レビュー単位。id はメニュー（lib/menu.ts）のリンク先にもなる: top / campaign / session / trial-flow / plan / instructor / facility / faq / access。 SP-1_14_closing-trial-banner-2 は SP-1 末尾 + SP-2 先頭（trial-banner-2）を連結した 1 枚（ページ境界 9377 が奇数のため。docs/slices.json extendIntoNext）。campaign-2 はキャンペーン再掲（メニューは #campaign）。 faq（単位 17）は component: \"faq\" で components/Faq.tsx が描く（見出し・末尾は画像、12 行は Q 帯画像 + 実テキストの details/summary。行データは lib/faq.json）。",
   "sections": [
-    { "id": "header", "unit": "01-header-fv", "pc": ["PC-1_01_header"], "sp": ["SP-1_01_header"] },
-    { "id": "top", "unit": "01-header-fv", "pc": ["PC-1_02_fv"], "sp": ["SP-1_02_fv"] },
-    {
-      "id": "points",
-      "unit": "03-points",
-      "pc": ["PC-1_03_point01", "PC-1_04_point02", "PC-1_05_point03"],
-      "sp": ["SP-1_03_point01", "SP-1_04_point02", "SP-1_05_point03"]
-    }
+    {"id": "header", "unit": "01-header-fv", "pc": ["PC-1_01_header"], "sp": ["SP-1_01_header"]},
+    {"id": "top", "unit": "01-header-fv", "pc": ["PC-1_02_fv"], "sp": ["SP-1_02_fv"]},
+    {"id": "points", "unit": "03-points", "pc": ["PC-1_03_point01", "PC-1_04_point02", "PC-1_05_point03"], "sp": ["SP-1_03_point01", "SP-1_04_point02", "SP-1_05_point03"]},
+    {"id": "trial-banner", "unit": "04-trial-banner", "pc": ["PC-1_06_trial-banner"], "sp": ["SP-1_06_trial-banner"]},
+    {"id": "campaign", "unit": "05-campaign", "pc": ["PC-1_07_campaign", "PC-1_08_gap"], "sp": ["SP-1_07_campaign", "SP-1_08_gap"]},
+    {"id": "session", "unit": "06-session", "pc": ["PC-1_09_session"], "sp": ["SP-1_09_session"]},
+    {"id": "target", "unit": "07-target", "pc": ["PC-1_10_target"], "sp": ["SP-1_10_target"]},
+    {"id": "effects", "unit": "08-effects", "pc": ["PC-1_11_effects", "PC-1_12_gap"], "sp": ["SP-1_11_effects", "SP-1_12_gap"]},
+    {"id": "requests", "unit": "09-requests", "pc": ["PC-1_13_requests"], "sp": ["SP-1_13_requests"]},
+    {"id": "closing", "unit": "10-closing-trial-banner-2", "pc": ["PC-1_14_closing", "PC-1_15_trial-banner-2"], "sp": ["SP-1_14_closing-trial-banner-2"]},
+    {"id": "trial-flow", "unit": "11-trial-flow", "pc": ["PC-2_01_trial-flow-heading", "PC-2_02_step01", "PC-2_03_reservation-flow", "PC-2_04_arrow", "PC-2_05_step02", "PC-2_06_belongings", "PC-2_07_step03", "PC-2_08_arrow", "PC-2_09_step04", "PC-2_10_arrow", "PC-2_11_step05", "PC-2_12_gap"], "sp": ["SP-2_02_trial-flow-heading", "SP-2_03_step01", "SP-2_04_reservation-flow", "SP-2_05_arrow", "SP-2_06_step02", "SP-2_07_belongings", "SP-2_08_step03", "SP-2_09_arrow", "SP-2_10_step04", "SP-2_11_arrow", "SP-2_12_step05", "SP-2_13_gap"]},
+    {"id": "campaign-2", "unit": "12-campaign-2", "pc": ["PC-2_13_campaign", "PC-2_14_gap"], "sp": ["SP-2_14_campaign", "SP-2_15_gap"]},
+    {"id": "plan", "unit": "13-plan", "pc": ["PC-2_15_plan-heading", "PC-2_16_plans", "PC-2_17_gap"], "sp": ["SP-2_16_plan-heading", "SP-2_17_plans"]},
+    {"id": "instructor", "unit": "14-instructor", "pc": ["PC-2_18_instructor-heading", "PC-2_19_instructor-bg", "PC-2_20_gap"], "sp": ["SP-3_01_instructor-heading", "SP-3_02_instructor-bg", "SP-3_03_gap"]},
+    {"id": "facility", "unit": "15-facility", "pc": ["PC-3_01_facility-heading", "PC-3_02_facility-intro", "PC-3_03_facility-photos", "PC-3_04_studios"], "sp": ["SP-3_04_facility-heading", "SP-3_05_facility-intro", "SP-3_06_facility-photos", "SP-3_07_studios"]},
+    {"id": "programs", "unit": "16-programs", "pc": ["PC-3_05_yoga", "PC-3_06_pilates-frp", "PC-3_07_hammock"], "sp": ["SP-3_08_yoga", "SP-3_09_pilates", "SP-3_10_frp", "SP-3_11_hammock"]},
+    {"id": "faq", "unit": "17-faq", "component": "faq", "pc": ["PC-3_08_faq-heading", "PC-3_09_faq-q01", "PC-3_10_faq-a01", "PC-3_11_faq-q02", "PC-3_12_faq-a02", "PC-3_13_faq-q03", "PC-3_14_faq-a03", "PC-3_15_faq-q04", "PC-3_16_faq-a04", "PC-3_17_faq-q05", "PC-3_18_faq-a05", "PC-3_19_faq-q06", "PC-3_20_faq-a06", "PC-3_21_faq-q07", "PC-3_22_faq-a07", "PC-3_23_faq-q08", "PC-3_24_faq-a08", "PC-3_25_faq-q09", "PC-3_26_faq-a09", "PC-3_27_faq-q10", "PC-3_28_faq-a10", "PC-3_29_faq-q11", "PC-3_30_faq-a11", "PC-3_31_faq-q12", "PC-3_32_faq-a12", "PC-3_33_faq-tail"], "sp": ["SP-3_12_faq-heading", "SP-4_02_faq-q01", "SP-4_03_faq-a01", "SP-4_04_faq-q02", "SP-4_05_faq-a02", "SP-4_06_faq-q03", "SP-4_07_faq-a03", "SP-4_08_faq-q04", "SP-4_09_faq-a04", "SP-4_10_faq-q05", "SP-4_11_faq-a05", "SP-4_12_faq-q06", "SP-4_13_faq-a06", "SP-4_14_faq-q07", "SP-4_15_faq-a07", "SP-4_16_faq-q08", "SP-4_17_faq-a08", "SP-4_18_faq-q09", "SP-4_19_faq-a09", "SP-4_20_faq-q10", "SP-4_21_faq-a10", "SP-4_22_faq-q11", "SP-4_23_faq-a11", "SP-4_24_faq-q12", "SP-4_25_faq-a12", "SP-4_26_faq-tail"]},
+    {"id": "access", "unit": "18-access", "pc": ["PC-3_34_access-heading", "PC-3_35_access-info", "PC-3_36_map", "PC-3_37_footer-cta"], "sp": ["SP-4_27_access-heading", "SP-4_28_access-info", "SP-4_29_map", "SP-4_30_footer-cta"]}
   ]
 }

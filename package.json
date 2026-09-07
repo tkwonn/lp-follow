@@ -1,15 +1,10 @@
 {
   "name": "follow-lp",
   "version": "0.1.0",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "images": "python3 tools/pdf_slice.py docs/slices.json --out=build/img && python3 tools/pdf_slice.py docs/slices.json --out=public/img",
-    "verify": "node tools/verify/run.mjs",
-    "serve": "python3 -m http.server 8080 -d out"
+    "start": "next start"
   },
   "dependencies": {
     "next": "^16.3.4",
@@ -20,10 +15,10 @@
     "@types/node": "^26.4.1",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
-    "pixelmatch": "^7.2.0",
-    "playwright": "^1.63.0",
-    "pngjs": "^7.0.0",
     "typescript": "^7.0.2"
   },
-  "private": true
+  "private": true,
+  "engines": {
+    "node": "22.x"
+  }
 }

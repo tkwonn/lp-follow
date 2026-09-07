@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { BREAKPOINT, CSS_WIDTH, slice, type Device, type SectionSpec, type Slice } from "@/lib/design";
 import alts from "@/lib/alt.json";
+import GoogleMap from "@/components/GoogleMap";
 
 const ALT = alts as Record<string, string>;
 
@@ -31,7 +32,11 @@ function SingleSlice({ s, eager, overlay }: { s: Slice; eager: boolean; overlay?
   );
 }
 
-/** PC / SP を 1 対 1 で対応させた切り出し（`picture` で切替。両方ダウンロードしない）。メニュー展開図（components/Menu.tsx）でも使う。 */
+/**
+ * PC / SP を 1 対 1 で対応させた切り出し（`picture` で切替。両方ダウンロードしない）。メニュー展開図（components/Menu.tsx）でも使う。
+ * `alt` は `img` に 1 つしか持てないため **PC 側の alt を両 device で使う**。対にする切り出しの alt は device 間で共通の内容
+ * （本文と、両方にある写真の説明）だけを書く（単位 05 Codex 指摘: SP には無い写真を alt に書いていた。2026-09-07）。
+ */
 export function PairedSlice({ pc, sp, eager, overlay }: { pc: Slice; sp: Slice; eager: boolean; overlay?: ReactNode }) {
   const alt = altOf(pc);
   return (
@@ -72,7 +77,9 @@ export default function Section({
   return (
     <section id={spec.id} data-section={spec.id} data-unit={spec.unit}>
       {paired
-        ? pc.map((p, i) => (
+        ? pc.map((p, i) => p.name === "PC-3_36_map" ? (
+            <GoogleMap key={p.name} />
+          ) : (
             <PairedSlice
               key={p.name}
               pc={p}

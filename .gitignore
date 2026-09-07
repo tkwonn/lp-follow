@@ -8,4 +8,24 @@ __pycache__/
 test-results/
 next-env.d.ts
 tsconfig.tsbuildinfo
-public/img/
+# Secrets and Vercel local state
+.env*
+!.env.example
+.vercel/
+
+# Keep production public/img and public/fonts in Git.
+# Keep design originals and verification material locally only.
+assets/
+design/
+docs/
+thoughts/
+tools/
+tests/
+playwright-report/
+public/compare/
+.claude/
+.agents/
+.codex/
+AGENTS.md
+CLAUDE.md
+ASSETS.md
