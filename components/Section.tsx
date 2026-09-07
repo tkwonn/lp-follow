@@ -31,8 +31,8 @@ function SingleSlice({ s, eager, overlay }: { s: Slice; eager: boolean; overlay?
   );
 }
 
-/** PC / SP を 1 対 1 で対応させた切り出し（`picture` で切替。両方ダウンロードしない）。 */
-function PairedSlice({ pc, sp, eager, overlay }: { pc: Slice; sp: Slice; eager: boolean; overlay?: ReactNode }) {
+/** PC / SP を 1 対 1 で対応させた切り出し（`picture` で切替。両方ダウンロードしない）。メニュー展開図（components/Menu.tsx）でも使う。 */
+export function PairedSlice({ pc, sp, eager, overlay }: { pc: Slice; sp: Slice; eager: boolean; overlay?: ReactNode }) {
   const alt = altOf(pc);
   return (
     <div className="slice" data-slice-pc={pc.name} data-slice-sp={sp.name}>

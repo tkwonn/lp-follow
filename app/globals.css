@@ -84,6 +84,31 @@ html.debug .hit {
   background: rgba(255, 0, 0, 0.12);
 }
 
+/* ハンバーガーメニュー展開図（単位 02）。viewport 先頭に固定し、PC-Menu 1920×1000 / SP-Menu 750×1400 を y=0 から全面で重ねる。
+   基準 viewport（1920×1000 / 375×700）では画像がちょうど収まる。viewport がそれより高い場合、展開図より下は
+   デザイン未定義領域なので、展開図左端の色 #d1c1a2（RGB 209,193,162。lib/menu.ts MENU_FILL_BELOW）で埋める（0.000% の対象外、記録済み）。
+   viewport がそれより低い場合は展開図の中だけ縦スクロールする（背景ページはスクロールしない）。 */
+.menu-layer {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: #ffffff; /* 1920px 超の左右（ページ背景と同じ白） */
+}
+.menu-layer[hidden] {
+  display: none;
+}
+.menu-layer__inner {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 100%;
+  margin: 0 auto;
+  background: #d1c1a2;
+}
+
 /* 読み上げ専用テキスト */
 .sr-only {
   position: absolute;

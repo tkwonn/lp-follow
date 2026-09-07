@@ -1,0 +1,854 @@
+{
+  "unit": "02-menu",
+  "date": "2026-09-07T10:36:29.716Z",
+  "commit": "d7c18b0",
+  "chromium": "153.0.8010.12",
+  "method": "pixelmatch threshold=0 includeAA=true; reference = build/img (pdftocairo -png -r 72, 1pt=1px; PC 1920px wide shown at CSS 1920 / DPR 1, SP 750px wide shown at CSS 375 / DPR 2); element screenshot scale=device",
+  "devices": {
+    "pc": {
+      "viewport": {
+        "width": 1920,
+        "height": 1000
+      },
+      "dsf": 1,
+      "consoleErrors": [],
+      "slices": [
+        {
+          "name": "PC-Menu_01_menu",
+          "ok": true,
+          "diff": 0,
+          "total": 1920000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            1920,
+            1000
+          ],
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1920,
+            "h": 1000
+          },
+          "subpixel": false
+        },
+        {
+          "name": "PC-1_01_header@reclosed",
+          "ok": true,
+          "diff": 0,
+          "total": 230400,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            1920,
+            120
+          ],
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1920,
+            "h": 120
+          },
+          "subpixel": false
+        },
+        {
+          "name": "PC-1_02_fv@reclosed",
+          "ok": true,
+          "diff": 0,
+          "total": 1632000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            1920,
+            850
+          ],
+          "box": {
+            "x": 0,
+            "y": 120,
+            "w": 1920,
+            "h": 850
+          },
+          "subpixel": false
+        },
+        {
+          "name": "PC-1_01_header@escaped-focus-ring",
+          "ok": false,
+          "diff": 972,
+          "total": 230400,
+          "pct": 0.4219,
+          "sizeMismatch": false,
+          "actualSize": [
+            1920,
+            120
+          ],
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1920,
+            "h": 120
+          },
+          "subpixel": false,
+          "informational": true,
+          "note": "Escape（キーボード）で閉じた直後。開くボタンの :focus-visible リング（outline 3px + offset 2px）が写る。期待どおりの挙動で合否に含めない"
+        }
+      ],
+      "viewportShots": [
+        {
+          "name": "viewport-open",
+          "ok": true,
+          "diff": 0,
+          "total": 1920000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "viewport": {
+            "width": 1920,
+            "height": 1000
+          },
+          "refSize": [
+            1920,
+            1000
+          ]
+        }
+      ],
+      "hits": [
+        {
+          "tag": "button",
+          "label": "メニューを閉じる",
+          "href": null,
+          "ariaDisabled": null,
+          "box": {
+            "x": 1437,
+            "y": 37,
+            "w": 48,
+            "h": 48
+          },
+          "devicePx": [
+            1437,
+            37,
+            48,
+            48
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "a",
+          "label": "トップ（Top）",
+          "href": "#top",
+          "ariaDisabled": null,
+          "box": {
+            "x": 598,
+            "y": 133,
+            "w": 534,
+            "h": 91
+          },
+          "devicePx": [
+            598,
+            133,
+            534,
+            91
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "キャンペーン（Campaign）：リンク先セクション「campaign」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 598,
+            "y": 224,
+            "w": 534,
+            "h": 91
+          },
+          "devicePx": [
+            598,
+            224,
+            534,
+            91
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "パーソナルセッション（Personal session）：リンク先セクション「session」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 598,
+            "y": 315,
+            "w": 534,
+            "h": 91
+          },
+          "devicePx": [
+            598,
+            315,
+            534,
+            91
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "体験の流れ（Trial Flow）：リンク先セクション「trial-flow」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 598,
+            "y": 406,
+            "w": 534,
+            "h": 90
+          },
+          "devicePx": [
+            598,
+            406,
+            534,
+            90
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "パーソナルプラン（Personal Plan）：リンク先セクション「plan」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 598,
+            "y": 496,
+            "w": 534,
+            "h": 91
+          },
+          "devicePx": [
+            598,
+            496,
+            534,
+            91
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "インストラクター紹介（Instructor）：リンク先セクション「instructor」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 598,
+            "y": 587,
+            "w": 534,
+            "h": 91
+          },
+          "devicePx": [
+            598,
+            587,
+            534,
+            91
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "スタジオのご案内（Studio）：リンク先セクション「facility」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 598,
+            "y": 678,
+            "w": 534,
+            "h": 89
+          },
+          "devicePx": [
+            598,
+            678,
+            534,
+            89
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "よくあるご質問（Faq）：リンク先セクション「faq」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 598,
+            "y": 767,
+            "w": 534,
+            "h": 93
+          },
+          "devicePx": [
+            598,
+            767,
+            534,
+            93
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "アクセスのご案内（Access）：リンク先セクション「access」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 598,
+            "y": 860,
+            "w": 534,
+            "h": 89
+          },
+          "devicePx": [
+            598,
+            860,
+            534,
+            89
+          ],
+          "subpixel": false
+        }
+      ],
+      "checks": [
+        {
+          "name": "closed: menu hidden",
+          "ok": true
+        },
+        {
+          "name": "closed: opener aria-expanded=false",
+          "ok": true
+        },
+        {
+          "name": "closed: opener aria-controls resolves",
+          "ok": true
+        },
+        {
+          "name": "open: menu visible",
+          "ok": true
+        },
+        {
+          "name": "open: opener aria-expanded=true",
+          "ok": true
+        },
+        {
+          "name": "open: focus on close button",
+          "ok": true,
+          "detail": "メニューを閉じる"
+        },
+        {
+          "name": "open: main is inert",
+          "ok": true
+        },
+        {
+          "name": "open: hit count = 10 (close + 9 items)",
+          "ok": true,
+          "detail": 10
+        },
+        {
+          "name": "open: no subpixel hit rect",
+          "ok": true
+        },
+        {
+          "name": "open: page not scrolled by wheel",
+          "ok": true,
+          "detail": 0
+        },
+        {
+          "name": "open: no horizontal scroll",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): menu hidden",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): opener aria-expanded=false",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): focus returned to opener",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): main not inert",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): html overflow restored",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): no horizontal scroll",
+          "ok": true
+        },
+        {
+          "name": "reopen: focus on close button",
+          "ok": true,
+          "detail": "メニューを閉じる"
+        },
+        {
+          "name": "open: Tab cycles close→items→close",
+          "ok": true,
+          "detail": [
+            "メニューを閉じる",
+            "トップ（Top）",
+            "キャンペーン（Campaign）：リンク先セクション「campaign」は未実装のためリンク未設定",
+            "パーソナルセッション（Personal session）：リンク先セクション「session」は未実装のためリンク未設定",
+            "体験の流れ（Trial Flow）：リンク先セクション「trial-flow」は未実装のためリンク未設定",
+            "パーソナルプラン（Personal Plan）：リンク先セクション「plan」は未実装のためリンク未設定",
+            "インストラクター紹介（Instructor）：リンク先セクション「instructor」は未実装のためリンク未設定",
+            "スタジオのご案内（Studio）：リンク先セクション「facility」は未実装のためリンク未設定",
+            "よくあるご質問（Faq）：リンク先セクション「faq」は未実装のためリンク未設定",
+            "アクセスのご案内（Access）：リンク先セクション「access」は未実装のためリンク未設定",
+            "メニューを閉じる"
+          ]
+        },
+        {
+          "name": "open: Shift+Tab from close goes to last item",
+          "ok": true,
+          "detail": "アクセスのご案内（Access）：リンク先セクション「access」は未実装のためリンク未設定"
+        },
+        {
+          "name": "escape: menu hidden",
+          "ok": true
+        },
+        {
+          "name": "escape: opener aria-expanded=false",
+          "ok": true
+        },
+        {
+          "name": "escape: focus returned to opener",
+          "ok": true
+        },
+        {
+          "name": "escape: main not inert",
+          "ok": true
+        },
+        {
+          "name": "escape: html overflow restored",
+          "ok": true
+        },
+        {
+          "name": "escape: opener matches :focus-visible (ring expected)",
+          "ok": true
+        }
+      ]
+    },
+    "sp": {
+      "viewport": {
+        "width": 375,
+        "height": 700
+      },
+      "dsf": 2,
+      "consoleErrors": [],
+      "slices": [
+        {
+          "name": "SP-Menu_01_menu",
+          "ok": true,
+          "diff": 0,
+          "total": 1050000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            750,
+            1400
+          ],
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 700
+          },
+          "subpixel": false
+        },
+        {
+          "name": "SP-1_01_header@reclosed",
+          "ok": true,
+          "diff": 0,
+          "total": 90000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            750,
+            120
+          ],
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 60
+          },
+          "subpixel": false
+        },
+        {
+          "name": "SP-1_02_fv@reclosed",
+          "ok": true,
+          "diff": 0,
+          "total": 900000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            750,
+            1200
+          ],
+          "box": {
+            "x": 0,
+            "y": 60,
+            "w": 375,
+            "h": 600
+          },
+          "subpixel": false
+        },
+        {
+          "name": "SP-1_01_header@escaped-focus-ring",
+          "ok": false,
+          "diff": 2448,
+          "total": 90000,
+          "pct": 2.72,
+          "sizeMismatch": false,
+          "actualSize": [
+            750,
+            120
+          ],
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 60
+          },
+          "subpixel": false,
+          "informational": true,
+          "note": "Escape（キーボード）で閉じた直後。開くボタンの :focus-visible リング（outline 3px + offset 2px）が写る。期待どおりの挙動で合否に含めない"
+        }
+      ],
+      "viewportShots": [
+        {
+          "name": "viewport-open",
+          "ok": true,
+          "diff": 0,
+          "total": 1050000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "viewport": {
+            "width": 375,
+            "height": 700
+          },
+          "refSize": [
+            750,
+            1400
+          ]
+        }
+      ],
+      "hits": [
+        {
+          "tag": "button",
+          "label": "メニューを閉じる",
+          "href": null,
+          "ariaDisabled": null,
+          "box": {
+            "x": 325.5,
+            "y": 19,
+            "w": 24,
+            "h": 24
+          },
+          "devicePx": [
+            651,
+            38,
+            48,
+            48
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "a",
+          "label": "トップ（Top）",
+          "href": "#top",
+          "ariaDisabled": null,
+          "box": {
+            "x": 45,
+            "y": 80.5,
+            "w": 289,
+            "h": 49
+          },
+          "devicePx": [
+            90,
+            161,
+            578,
+            98
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "キャンペーン（Campaign）：リンク先セクション「campaign」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 45,
+            "y": 129.5,
+            "w": 289,
+            "h": 49
+          },
+          "devicePx": [
+            90,
+            259,
+            578,
+            98
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "パーソナルセッション（Personal session）：リンク先セクション「session」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 45,
+            "y": 178.5,
+            "w": 289,
+            "h": 49.5
+          },
+          "devicePx": [
+            90,
+            357,
+            578,
+            99
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "体験の流れ（Trial Flow）：リンク先セクション「trial-flow」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 45,
+            "y": 228,
+            "w": 289,
+            "h": 48.5
+          },
+          "devicePx": [
+            90,
+            456,
+            578,
+            97
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "パーソナルプラン（Personal Plan）：リンク先セクション「plan」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 45,
+            "y": 276.5,
+            "w": 289,
+            "h": 49.5
+          },
+          "devicePx": [
+            90,
+            553,
+            578,
+            99
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "インストラクター紹介（Instructor）：リンク先セクション「instructor」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 45,
+            "y": 326,
+            "w": 289,
+            "h": 49
+          },
+          "devicePx": [
+            90,
+            652,
+            578,
+            98
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "スタジオのご案内（Studio）：リンク先セクション「facility」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 45,
+            "y": 375,
+            "w": 289,
+            "h": 48.5
+          },
+          "devicePx": [
+            90,
+            750,
+            578,
+            97
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "よくあるご質問（Faq）：リンク先セクション「faq」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 45,
+            "y": 423.5,
+            "w": 289,
+            "h": 50
+          },
+          "devicePx": [
+            90,
+            847,
+            578,
+            100
+          ],
+          "subpixel": false
+        },
+        {
+          "tag": "button",
+          "label": "アクセスのご案内（Access）：リンク先セクション「access」は未実装のためリンク未設定",
+          "href": null,
+          "ariaDisabled": "true",
+          "box": {
+            "x": 45,
+            "y": 473.5,
+            "w": 289,
+            "h": 48.5
+          },
+          "devicePx": [
+            90,
+            947,
+            578,
+            97
+          ],
+          "subpixel": false
+        }
+      ],
+      "checks": [
+        {
+          "name": "closed: menu hidden",
+          "ok": true
+        },
+        {
+          "name": "closed: opener aria-expanded=false",
+          "ok": true
+        },
+        {
+          "name": "closed: opener aria-controls resolves",
+          "ok": true
+        },
+        {
+          "name": "open: menu visible",
+          "ok": true
+        },
+        {
+          "name": "open: opener aria-expanded=true",
+          "ok": true
+        },
+        {
+          "name": "open: focus on close button",
+          "ok": true,
+          "detail": "メニューを閉じる"
+        },
+        {
+          "name": "open: main is inert",
+          "ok": true
+        },
+        {
+          "name": "open: hit count = 10 (close + 9 items)",
+          "ok": true,
+          "detail": 10
+        },
+        {
+          "name": "open: no subpixel hit rect",
+          "ok": true
+        },
+        {
+          "name": "open: page not scrolled by wheel",
+          "ok": true,
+          "detail": 0
+        },
+        {
+          "name": "open: no horizontal scroll",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): menu hidden",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): opener aria-expanded=false",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): focus returned to opener",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): main not inert",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): html overflow restored",
+          "ok": true
+        },
+        {
+          "name": "reclose(mouse): no horizontal scroll",
+          "ok": true
+        },
+        {
+          "name": "reopen: focus on close button",
+          "ok": true,
+          "detail": "メニューを閉じる"
+        },
+        {
+          "name": "open: Tab cycles close→items→close",
+          "ok": true,
+          "detail": [
+            "メニューを閉じる",
+            "トップ（Top）",
+            "キャンペーン（Campaign）：リンク先セクション「campaign」は未実装のためリンク未設定",
+            "パーソナルセッション（Personal session）：リンク先セクション「session」は未実装のためリンク未設定",
+            "体験の流れ（Trial Flow）：リンク先セクション「trial-flow」は未実装のためリンク未設定",
+            "パーソナルプラン（Personal Plan）：リンク先セクション「plan」は未実装のためリンク未設定",
+            "インストラクター紹介（Instructor）：リンク先セクション「instructor」は未実装のためリンク未設定",
+            "スタジオのご案内（Studio）：リンク先セクション「facility」は未実装のためリンク未設定",
+            "よくあるご質問（Faq）：リンク先セクション「faq」は未実装のためリンク未設定",
+            "アクセスのご案内（Access）：リンク先セクション「access」は未実装のためリンク未設定",
+            "メニューを閉じる"
+          ]
+        },
+        {
+          "name": "open: Shift+Tab from close goes to last item",
+          "ok": true,
+          "detail": "アクセスのご案内（Access）：リンク先セクション「access」は未実装のためリンク未設定"
+        },
+        {
+          "name": "escape: menu hidden",
+          "ok": true
+        },
+        {
+          "name": "escape: opener aria-expanded=false",
+          "ok": true
+        },
+        {
+          "name": "escape: focus returned to opener",
+          "ok": true
+        },
+        {
+          "name": "escape: main not inert",
+          "ok": true
+        },
+        {
+          "name": "escape: html overflow restored",
+          "ok": true
+        },
+        {
+          "name": "escape: opener matches :focus-visible (ring expected)",
+          "ok": true
+        }
+      ]
+    }
+  },
+  "pass": true
+}

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import Section from "@/components/Section";
 import DebugFlag from "@/components/DebugFlag";
-import { MenuButton, MenuProvider } from "@/components/Menu";
+import { LpMain, MenuButton, MenuOverlay, MenuProvider } from "@/components/Menu";
 import { SECTIONS } from "@/lib/design";
 
 /** 切り出し名 → 重ねる当たり判定。矩形は docs/sections.md のデザイン px。 */
@@ -17,11 +17,13 @@ export default function Page() {
   return (
     <MenuProvider>
       <DebugFlag />
-      <main className="lp">
+      <LpMain>
         {SECTIONS.map((spec) => (
           <Section key={spec.id} spec={spec} overlays={OVERLAYS} eager={EAGER_SECTIONS.has(spec.id)} />
         ))}
-      </main>
+      </LpMain>
+      {/* メニュー展開図（単位 02）。main の外に置き、展開中は main を inert にする */}
+      <MenuOverlay />
     </MenuProvider>
   );
 }
