@@ -1,0 +1,143 @@
+frame              18:13    SP-3                   x=  4811.0 y= -5282.0 w=   750.0 h=  8557.0 (y1=  3275.0) n=1027
+
+== 1. direct children of top-level groups (sorted by y) ==
+
+ frame              18:14    BACK画像                 x=   -30.0 y=   300.0 w=   802.0 h=  7935.0 (y1=  8235.0) n=42
+    frame              2:156    Clip path group        x=     0.0 y=   300.0 w=   750.0 h=   818.0 (y1=  1118.0) n=4
+    frame              2:19     Clip path group        x=     0.0 y=  1537.0 w=   750.0 h=   772.7 (y1=  2309.7) n=11
+    frame              2:69     Mask group             x=    37.0 y=  6066.0 w=   680.0 h=   457.0 (y1=  6523.0) n=6
+    frame              2:87     Mask group             x=   -30.0 y=  6816.0 w=   798.3 h=   535.0 (y1=  7351.0) n=10
+    frame              2:76     Mask group             x=   -24.0 y=  7703.0 w=   796.0 h=   532.0 (y1=  8235.0) n=6
+
+ frame              18:15    BACKカラー                x=  -129.0 y=     0.0 w=   960.2 h=  8478.5 (y1=  8478.5) n=63
+    frame              2:516    Clip path group        x=     0.0 y=     0.0 w=   750.0 h=   300.0 (y1=   300.0) n=5
+    frame              2:504    Clip path group        x=     0.0 y=  1238.0 w=   750.0 h=   300.0 (y1=  1538.0) n=5
+    frame              2:740    Group                  x=    99.1 y=  2329.0 w=   453.0 h=   277.3 (y1=  2606.3) n=6
+    frame              2:747    Group                  x=   257.3 y=  2562.1 w=   453.0 h=   277.3 (y1=  2839.4) n=6
+    frame              2:632    Group                  x=    72.0 y=  2862.7 w=   453.0 h=   277.3 (y1=  3140.0) n=6
+    frame              2:643    Clip path group        x=    25.0 y=  3763.0 w=   690.0 h=   376.8 (y1=  4139.8) n=4
+    frame              2:648    Clip path group        x=    25.0 y=  4164.6 w=   690.0 h=   376.8 (y1=  4541.4) n=4
+    frame              2:653    Clip path group        x=    30.0 y=  4569.2 w=   690.0 h=   376.8 (y1=  4946.0) n=4
+    frame              2:664    Mask group             x=  -129.0 y=  4929.6 w=   960.2 h=   748.4 (y1=  5678.0) n=10
+    vector             2:665    Vector                 x=    33.3 y=  5982.5 w=   688.0 h=     0.0 (y1=  5982.5) n=0
+    vector             2:666    Vector                 x=    33.0 y=  6840.5 w=   688.0 h=     0.0 (y1=  6840.5) n=0
+    vector             2:667    Vector                 x=    33.0 y=  7534.5 w=   688.0 h=     0.0 (y1=  7534.5) n=0
+    vector             2:668    Vector                 x=    33.3 y=  8478.5 w=   688.0 h=     0.0 (y1=  8478.5) n=0
+
+ frame              18:16    DESIGN                 x=    18.8 y=    67.9 w=   710.5 h=  8341.2 (y1=  8409.1) n=919
+    frame              2:7436   Group                  x=   186.5 y=    67.9 w=   381.8 h=    53.7 (y1=   121.6) n=10
+    frame              2:7392   Group                  x=    74.5 y=   165.4 w=   609.2 h=    72.7 (y1=   238.1) n=43
+    vector             2:7305   Vector                 x=    57.0 y=   364.5 w=   306.1 h=   620.9 (y1=   985.5) n=0
+    vector             2:7306   Vector                 x=   383.9 y=   364.5 w=   306.1 h=   620.9 (y1=   985.5) n=0
+    vector             2:7326   Vector                 x=   401.0 y=   374.8 w=   271.9 h=   255.6 (y1=   630.5) n=0
+    frame              2:7342   Clip path group        x=   401.9 y=   379.1 w=   271.9 h=   255.6 (y1=   634.7) n=4
+    vector             2:7325   Vector                 x=    75.8 y=   381.6 w=   271.9 h=   255.6 (y1=   637.3) n=0
+    frame              2:7316   _x35_6                 x=    18.8 y=   642.8 w=    14.3 h=    28.3 (y1=   671.1) n=0
+    frame              2:7307   _x35_6                 x=   715.0 y=   642.8 w=    14.3 h=    28.3 (y1=   671.1) n=0
+    frame              2:7327   Group                  x=   502.5 y=   646.8 w=    60.2 h=    18.8 (y1=   665.6) n=0
+    frame              2:7331   Group                  x=   133.9 y=   653.1 w=   157.8 h=    19.5 (y1=   672.6) n=0
+    frame              2:7343   Group                  x=   413.5 y=   700.0 w=   250.1 h=   180.3 (y1=   880.3) n=0
+    frame              2:1920   Group                  x=   236.6 y=  1298.9 w=   286.7 h=    75.8 (y1=  1374.8) n=8
+    frame              2:1882   Group                  x=   108.2 y=  1405.0 w=   535.7 h=    73.0 (y1=  1478.0) n=37
+    frame              2:4119   Group                  x=    38.9 y=  1623.6 w=   685.2 h=   145.4 (y1=  1769.0) n=63
+    frame              2:4183   Group                  x=    29.9 y=  1852.0 w=   691.9 h=   438.9 (y1=  2290.9) n=124
+    frame              2:7447   Group                  x=   300.4 y=  3238.4 w=   143.2 h=   143.2 (y1=  3381.6) n=0
+    frame              2:4568   Group                  x=    68.7 y=  3408.0 w=   611.1 h=    36.3 (y1=  3444.2) n=22
+    vector             2:4687   Vector                 x=    31.0 y=  3471.5 w=   690.0 h=     0.0 (y1=  3471.5) n=0
+    frame              2:4591   Group                  x=    51.8 y=  3512.3 w=   646.3 h=   181.5 (y1=  3693.8) n=95
+    frame              2:4494   Group                  x=   279.3 y=  3938.1 w=   185.2 h=    37.0 (y1=  3975.1) n=0
+    frame              2:4502   Group                  x=   282.6 y=  4339.7 w=   176.4 h=    37.0 (y1=  4376.7) n=0
+    frame              2:4510   Group                  x=   285.2 y=  4744.3 w=   181.3 h=    37.0 (y1=  4781.3) n=0
+    frame              2:4518   Group                  x=   314.1 y=  5083.0 w=   126.6 h=    30.6 (y1=  5113.7) n=0
+    frame              2:4754   Group                  x=    52.3 y=  5657.9 w=   646.8 h=   222.1 (y1=  5880.1) n=117
+    frame              2:4523   Group                  x=   291.9 y=  6043.9 w=   171.3 h=    30.8 (y1=  6074.7) n=0
+    frame              2:4872   Group                  x=    50.7 y=  6537.0 w=   648.6 h=   222.1 (y1=  6759.1) n=112
+    frame              2:4539   Group                  x=   148.7 y=  6885.0 w=   446.3 h=    34.5 (y1=  6919.5) n=28
+    frame              2:5097   Group                  x=    51.3 y=  7340.6 w=   647.8 h=   122.5 (y1=  7463.1) n=81
+    frame              2:4531   Group                  x=   251.8 y=  7600.0 w=   246.0 h=    30.7 (y1=  7630.7) n=0
+    frame              2:4688   Group                  x=    45.5 y=  7653.7 w=   674.3 h=    22.2 (y1=  7675.9) n=32
+    frame              2:4985   Group                  x=    50.8 y=  8186.5 w=   647.9 h=   222.5 (y1=  8409.1) n=111
+
+== 2. rounded-rectangles ==
+  rounded-rectangle  2:512    Rectangle              x=  -105.3 y=  -116.8 w=   918.0 h=   610.7 (y1=   493.9) n=0
+  rounded-rectangle  2:14     Rectangle              x=     0.0 y=     0.0 w=  1163.0 h=   777.0 (y1=   777.0) n=0
+  rounded-rectangle  2:67     Rectangle              x=     0.0 y=     0.0 w=   680.0 h=   457.0 (y1=   457.0) n=0
+  rounded-rectangle  2:74     Rectangle              x=     0.0 y=     0.0 w=   796.0 h=   532.0 (y1=   532.0) n=0
+  rounded-rectangle  2:85     Rectangle              x=    28.0 y=    36.0 w=   751.0 h=   499.0 (y1=   535.0) n=0
+  rounded-rectangle  2:662    Rectangle              x=   127.0 y=   123.4 w=   754.0 h=   611.0 (y1=   734.4) n=0
+  rounded-rectangle  2:153    Rectangle              x=  -262.9 y=   286.0 w=  1634.2 h=  1143.9 (y1=  1429.9) n=0
+  rounded-rectangle  2:7339   Rectangle              x=   377.9 y=   331.2 w=   318.1 h=   318.1 (y1=   649.3) n=0
+  rounded-rectangle  2:500    Rectangle              x=   -34.0 y=  1040.2 w=  1076.8 h=   682.2 (y1=  1722.5) n=0
+  rounded-rectangle  2:11     Rectangle              x=  -204.0 y=  1467.0 w=  1159.1 h=   772.7 (y1=  2239.7) n=0
+  rounded-rectangle  2:742    Rectangle              x=    95.1 y=  2316.6 w=   457.4 h=   304.9 (y1=  2621.5) n=0
+  rounded-rectangle  2:749    Rectangle              x=   256.8 y=  2544.5 w=   450.3 h=   315.2 (y1=  2859.7) n=0
+  rounded-rectangle  2:634    Rectangle              x=    63.4 y=  2850.6 w=   486.6 h=   324.6 (y1=  3175.1) n=0
+  rounded-rectangle  2:640    Rectangle              x=    18.2 y=  3687.3 w=   703.6 h=   468.9 (y1=  4156.2) n=0
+  rounded-rectangle  2:645    Rectangle              x=    17.3 y=  4096.8 w=   702.5 h=   491.8 (y1=  4588.6) n=0
+  rounded-rectangle  2:650    Rectangle              x=    22.4 y=  4500.8 w=   703.8 h=   492.7 (y1=  4993.5) n=0
+  rounded-rectangle  2:656    Rectangle              x=  -129.0 y=  4929.6 w=   960.2 h=   748.4 (y1=  5678.0) n=0
+  rounded-rectangle  2:64     Rectangle              x=    39.0 y=  6068.0 w=   675.8 h=   452.1 (y1=  6520.1) n=0
+  rounded-rectangle  2:79     Rectangle              x=   -30.0 y=  6816.0 w=   798.2 h=   532.0 (y1=  7348.0) n=0
+  rounded-rectangle  2:71     Rectangle              x=   -22.0 y=  7705.0 w=   791.3 h=   527.8 (y1=  8232.8) n=0
+
+== 3. full-width nodes (width >= 740) ==
+  frame              2:511    Group                  x=  -105.3 y=  -116.8 w=   918.0 h=   610.7 (y1=   493.9) n=2
+  rounded-rectangle  2:512    Rectangle              x=  -105.3 y=  -116.8 w=   918.0 h=   610.7 (y1=   493.9) n=0
+  vector             2:513    Vector                 x=   -40.0 y=   -22.0 w=   846.0 h=   420.0 (y1=   398.0) n=0
+  frame              18:15    BACKカラー                x=  -129.0 y=     0.0 w=   960.2 h=  8478.5 (y1=  8478.5) n=63
+  frame              2:13     Group                  x=     0.0 y=     0.0 w=  1163.0 h=   777.0 (y1=   777.0) n=1
+  rounded-rectangle  2:14     Rectangle              x=     0.0 y=     0.0 w=  1163.0 h=   777.0 (y1=   777.0) n=0
+  frame              2:73     Group                  x=     0.0 y=     0.0 w=   796.0 h=   532.0 (y1=   532.0) n=1
+  rounded-rectangle  2:74     Rectangle              x=     0.0 y=     0.0 w=   796.0 h=   532.0 (y1=   532.0) n=0
+  frame              2:516    Clip path group        x=     0.0 y=     0.0 w=   750.0 h=   300.0 (y1=   300.0) n=5
+  frame              2:514    clippath-43            x=     0.0 y=     0.0 w=   750.0 h=   300.0 (y1=   300.0) n=1
+  vector             2:515    Vector                 x=     0.0 y=     0.0 w=   750.0 h=   300.0 (y1=   300.0) n=0
+  frame              2:84     Group                  x=    28.0 y=    36.0 w=   751.0 h=   499.0 (y1=   535.0) n=1
+  rounded-rectangle  2:85     Rectangle              x=    28.0 y=    36.0 w=   751.0 h=   499.0 (y1=   535.0) n=0
+  frame              2:661    Group                  x=   127.0 y=   123.4 w=   754.0 h=   611.0 (y1=   734.4) n=1
+  rounded-rectangle  2:662    Rectangle              x=   127.0 y=   123.4 w=   754.0 h=   611.0 (y1=   734.4) n=0
+  frame              2:152    Group                  x=  -262.9 y=   286.0 w=  1634.2 h=  1143.9 (y1=  1429.9) n=1
+  rounded-rectangle  2:153    Rectangle              x=  -262.9 y=   286.0 w=  1634.2 h=  1143.9 (y1=  1429.9) n=0
+  frame              18:14    BACK画像                 x=   -30.0 y=   300.0 w=   802.0 h=  7935.0 (y1=  8235.0) n=42
+  frame              2:156    Clip path group        x=     0.0 y=   300.0 w=   750.0 h=   818.0 (y1=  1118.0) n=4
+  frame              2:154    clippath-10            x=     0.0 y=   300.0 w=   750.0 h=   818.0 (y1=  1118.0) n=1
+  vector             2:155    Vector                 x=     0.0 y=   300.0 w=   750.0 h=   818.0 (y1=  1118.0) n=0
+  frame              2:499    Group                  x=   -34.0 y=  1040.2 w=  1076.8 h=   682.2 (y1=  1722.5) n=2
+  rounded-rectangle  2:500    Rectangle              x=   -34.0 y=  1040.2 w=  1076.8 h=   682.2 (y1=  1722.5) n=0
+  vector             2:501    Vector                 x=     0.0 y=  1236.0 w=   750.0 h=   302.0 (y1=  1538.0) n=0
+  frame              2:504    Clip path group        x=     0.0 y=  1238.0 w=   750.0 h=   300.0 (y1=  1538.0) n=5
+  frame              2:502    clippath-41            x=     0.0 y=  1238.0 w=   750.0 h=   300.0 (y1=  1538.0) n=1
+  vector             2:503    Vector                 x=     0.0 y=  1238.0 w=   750.0 h=   300.0 (y1=  1538.0) n=0
+  frame              2:8      Group                  x=  -206.0 y=  1465.0 w=  1163.0 h=   777.0 (y1=  2242.0) n=8
+  frame              2:9      Group                  x=  -206.0 y=  1465.0 w=  1163.0 h=   777.0 (y1=  2242.0) n=7
+  frame              2:16     Mask group             x=  -206.0 y=  1465.0 w=  1163.0 h=   777.0 (y1=  2242.0) n=6
+  frame              2:12     Group                  x=  -206.0 y=  1465.0 w=  1163.0 h=   777.0 (y1=  2242.0) n=3
+  frame              2:15     Frame                  x=  -206.0 y=  1465.0 w=  1163.0 h=   777.0 (y1=  2242.0) n=2
+  frame              2:10     Group                  x=  -204.0 y=  1467.0 w=  1159.1 h=   772.7 (y1=  2239.7) n=1
+  rounded-rectangle  2:11     Rectangle              x=  -204.0 y=  1467.0 w=  1159.1 h=   772.7 (y1=  2239.7) n=0
+  frame              2:19     Clip path group        x=     0.0 y=  1537.0 w=   750.0 h=   772.7 (y1=  2309.7) n=11
+  frame              2:17     clippath               x=     0.0 y=  1537.0 w=   750.0 h=   772.7 (y1=  2309.7) n=1
+  vector             2:18     Vector                 x=     0.0 y=  1537.0 w=   750.0 h=   772.7 (y1=  2309.7) n=0
+  frame              2:664    Mask group             x=  -129.0 y=  4929.6 w=   960.2 h=   748.4 (y1=  5678.0) n=10
+  frame              2:660    Group                  x=  -129.0 y=  4929.6 w=   960.2 h=   748.4 (y1=  5678.0) n=3
+  frame              2:663    Frame                  x=  -129.0 y=  4929.6 w=   960.2 h=   748.4 (y1=  5678.0) n=2
+  frame              2:655    Group                  x=  -129.0 y=  4929.6 w=   960.2 h=   748.4 (y1=  5678.0) n=1
+  rounded-rectangle  2:656    Rectangle              x=  -129.0 y=  4929.6 w=   960.2 h=   748.4 (y1=  5678.0) n=0
+  frame              2:654    Group                  x=     0.0 y=  5055.0 w=   750.0 h=   607.0 (y1=  5662.0) n=5
+  frame              2:659    Clip path group        x=     0.0 y=  5055.0 w=   750.0 h=   607.0 (y1=  5662.0) n=4
+  frame              2:657    clippath-59            x=     0.0 y=  5055.0 w=   750.0 h=   607.0 (y1=  5662.0) n=1
+  vector             2:658    Vector                 x=     0.0 y=  5055.0 w=   750.0 h=   607.0 (y1=  5662.0) n=0
+  frame              2:87     Mask group             x=   -30.0 y=  6816.0 w=   798.3 h=   535.0 (y1=  7351.0) n=10
+  frame              2:83     Group                  x=   -30.0 y=  6816.0 w=   798.3 h=   535.0 (y1=  7351.0) n=3
+  frame              2:86     Frame                  x=   -30.0 y=  6816.0 w=   798.3 h=   535.0 (y1=  7351.0) n=2
+  frame              2:78     Group                  x=   -30.0 y=  6816.0 w=   798.2 h=   532.0 (y1=  7348.0) n=1
+  rounded-rectangle  2:79     Rectangle              x=   -30.0 y=  6816.0 w=   798.2 h=   532.0 (y1=  7348.0) n=0
+  frame              2:77     Group                  x=     0.0 y=  6854.0 w=   747.0 h=   495.0 (y1=  7349.0) n=5
+  frame              2:82     Clip path group        x=     0.0 y=  6854.0 w=   747.0 h=   495.0 (y1=  7349.0) n=4
+  frame              2:80     clippath-2             x=     0.0 y=  6854.0 w=   747.0 h=   495.0 (y1=  7349.0) n=1
+  vector             2:81     Vector                 x=     0.0 y=  6854.0 w=   747.0 h=   495.0 (y1=  7349.0) n=0
+  frame              2:76     Mask group             x=   -24.0 y=  7703.0 w=   796.0 h=   532.0 (y1=  8235.0) n=6
+  frame              2:72     Group                  x=   -24.0 y=  7703.0 w=   796.0 h=   532.0 (y1=  8235.0) n=3
+  frame              2:75     Frame                  x=   -24.0 y=  7703.0 w=   796.0 h=   532.0 (y1=  8235.0) n=2
+  frame              2:70     Group                  x=   -22.0 y=  7705.0 w=   791.3 h=   527.8 (y1=  8232.8) n=1
+  rounded-rectangle  2:71     Rectangle              x=   -22.0 y=  7705.0 w=   791.3 h=   527.8 (y1=  8232.8) n=0

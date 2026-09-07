@@ -1,0 +1,32 @@
+frame              18:2     SP-Menu                x=  1633.0 y= -5282.0 w=   750.0 h=  1400.0 (y1= -3882.0) n=57
+
+== 1. direct children of top-level groups (sorted by y) ==
+
+ frame              18:3     BACK画像                 x=     0.0 y=   120.0 w=   750.0 h=  1280.0 (y1=  1400.0) n=1
+    vector             2:345    Vector                 x=     0.0 y=   120.0 w=   750.0 h=  1280.0 (y1=  1400.0) n=0
+
+ frame              18:4     BACKカラー                x=    68.0 y=   978.0 w=   641.0 h=   430.0 (y1=  1408.0) n=7
+    frame              2:768    Mask group             x=    68.0 y=   978.0 w=   641.0 h=   430.0 (y1=  1408.0) n=6
+
+ frame              18:5     DESIGN                 x=    89.7 y=    18.0 w=   609.6 h=  1026.0 (y1=  1044.0) n=46
+    frame              2:8285   Group                  x=   265.1 y=    18.0 w=   209.9 h=    87.9 (y1=   105.9) n=0
+    frame              2:8314   Group                  x=   651.4 y=    38.0 w=    48.0 h=    48.0 (y1=    86.0) n=0
+    frame              2:8317   Group                  x=   581.6 y=   192.3 w=    58.2 h=    23.7 (y1=   216.1) n=0
+    frame              2:8392   Group                  x=   118.5 y=   194.9 w=   291.7 h=   816.3 (y1=  1011.2) n=24
+    frame              2:8365   Group                  x=    89.7 y=   258.8 w=   578.5 h=   785.2 (y1=  1044.0) n=9
+    frame              2:8321   Group                  x=   531.2 y=   301.1 w=   116.3 h=    18.1 (y1=   319.2) n=0
+    frame              2:8328   Group                  x=   449.8 y=   400.8 w=   197.7 h=    18.3 (y1=   419.1) n=0
+    frame              2:8339   Group                  x=   537.8 y=   499.1 w=   110.9 h=    20.3 (y1=   519.4) n=0
+    frame              2:8474   Group                  x=   486.2 y=   591.1 w=   161.4 h=    20.2 (y1=   611.2) n=0
+    frame              2:8345   Group                  x=   454.2 y=   692.7 w=   194.2 h=    20.2 (y1=   712.9) n=0
+    frame              2:8356   Group                  x=   481.7 y=   791.3 w=   165.0 h=    20.9 (y1=   812.2) n=0
+    frame              2:8375   Group                  x=   508.0 y=   892.1 w=   139.3 h=    20.6 (y1=   912.7) n=0
+    frame              2:8383   Group                  x=   480.3 y=   989.4 w=   166.5 h=    20.4 (y1=  1009.8) n=0
+
+== 2. rounded-rectangles ==
+  rounded-rectangle  2:766    Rectangle              x=     0.0 y=     0.0 w=   641.0 h=   430.0 (y1=   430.0) n=0
+  rounded-rectangle  2:763    Rectangle              x=    70.0 y=   980.7 w=   636.2 h=   424.1 (y1=  1404.8) n=0
+
+== 3. full-width nodes (width >= 740) ==
+  frame              18:3     BACK画像                 x=     0.0 y=   120.0 w=   750.0 h=  1280.0 (y1=  1400.0) n=1
+  vector             2:345    Vector                 x=     0.0 y=   120.0 w=   750.0 h=  1280.0 (y1=  1400.0) n=0
