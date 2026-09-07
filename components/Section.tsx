@@ -24,6 +24,7 @@ function SingleSlice({ s, eager, overlay }: { s: Slice; eager: boolean; overlay?
         height={s.imgHeight}
         alt={altOf(s)}
         loading={eager ? "eager" : "lazy"}
+        fetchPriority={s.name.endsWith("_02_fv") ? "high" : undefined}
         decoding="sync"
         draggable={false}
       />
@@ -49,6 +50,7 @@ export function PairedSlice({ pc, sp, eager, overlay }: { pc: Slice; sp: Slice; 
           height={pc.imgHeight}
           alt={alt}
           loading={eager ? "eager" : "lazy"}
+          fetchPriority={pc.name.endsWith("_02_fv") ? "high" : undefined}
           decoding="sync"
           draggable={false}
         />

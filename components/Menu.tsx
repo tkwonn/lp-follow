@@ -18,14 +18,23 @@ import { MENU_CLOSE_RECT, MENU_ITEMS, MENU_SLICE, anchorExists } from "@/lib/men
 
 export const MENU_ID = "site-menu";
 
-type MenuState = { open: boolean; toggle: () => void; close: () => void };
+type MenuState = { open: boolean; toggle: () => void; close: () => void; preload: () => void };
 const MenuContext = createContext<MenuState | null>(null);
 
 export function MenuProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
+  const preloadRef = useRef<HTMLImageElement | null>(null);
   const toggle = useCallback(() => setOpen((v) => !v), []);
   const close = useCallback(() => setOpen(false), []);
-  const value = useMemo(() => ({ open, toggle, close }), [open, toggle, close]);
+  const preload = useCallback(() => {
+    if (preloadRef.current) return;
+    const dev = window.matchMedia("(max-width: 767px)").matches ? "sp" : "pc";
+    const image = new Image();
+    image.decoding = "sync";
+    image.src = slice(MENU_SLICE[dev]).src;
+    preloadRef.current = image;
+  }, []);
+  const value = useMemo(() => ({ open, toggle, close, preload }), [open, toggle, close, preload]);
   return <MenuContext.Provider value={value}>{children}</MenuContext.Provider>;
 }
 
@@ -47,7 +56,7 @@ export function LpMain({ children }: { children: ReactNode }) {
 
 /** ヘッダーのハンバーガー（開く）ボタン。展開中は展開図（MenuOverlay）に覆われる。 */
 export function MenuButton({ sliceName, rect }: { sliceName: string; rect: Rect }) {
-  const { open, toggle } = useMenu();
+  const { open, toggle, preload } = useMenu();
   return (
     <HitButton
       sliceName={sliceName}
@@ -55,6 +64,9 @@ export function MenuButton({ sliceName, rect }: { sliceName: string; rect: Rect 
       label="メニューを開く"
       aria-expanded={open}
       aria-controls={MENU_ID}
+      onFocus={preload}
+      onPointerEnter={preload}
+      onPointerDown={preload}
       onClick={toggle}
     />
   );
@@ -72,7 +84,8 @@ function visibleFocusables(root: HTMLElement): HTMLElement[] {
  * - 閉じる（×）と 9 項目は透明な当たり判定。項目はリンク先セクションが実装済みなら `a`、未実装なら「リンク未設定」の button。
  * - 開いたら閉じるボタンへフォーカス、Escape で閉じる、閉じたら開くボタンへフォーカス復帰、Tab は閉じる→項目 1〜9 で循環。
  * - 開いている間は html を overflow:hidden（スクロールバー幅ぶん padding-right で補正し、レイアウト幅を変えない）。
- * - 常に DOM に置き（hidden）、画像は eager で先読みする。閉状態では描画に一切関与しない。
+ * - 常に DOM に置き（hidden）、画像はボタンの hover / focus / pointerdown で先読みする。
+ *   閉じたままの初期表示では取得せず、LCP の通信を妨げない。閉状態では描画に一切関与しない。
  */
 export function MenuOverlay() {
   const { open, close } = useMenu();
@@ -149,7 +162,7 @@ export function MenuOverlay() {
         <PairedSlice
           pc={pc}
           sp={sp}
-          eager
+          eager={open}
           overlay={
             <>
               {(["pc", "sp"] as const).map((dev) => (

@@ -43,6 +43,26 @@ type SlicesSpec = {
 // Personal Plan は比較で確認した、元 PDF の文字・枠線を保持する SVG を使用。
 const SVG_SLICES = new Set(["PC-2_16_plans", "SP-2_17_plans"]);
 
+// 初期表示付近とメニューは可逆 WebP。PNG とデコード後の RGBA が一致することを変換時に検証する。
+const WEBP_SLICES = new Set([
+  "PC-1_02_fv",
+  "PC-1_03_point01",
+  "PC-1_04_point02",
+  "PC-1_05_point03",
+  "PC-Menu_01_menu",
+  "SP-1_02_fv",
+  "SP-1_03_point01",
+  "SP-1_04_point02",
+  "SP-1_05_point03",
+  "SP-Menu_01_menu",
+]);
+
+function extensionOf(name: string): "svg" | "webp" | "png" {
+  if (SVG_SLICES.has(name)) return "svg";
+  if (WEBP_SLICES.has(name)) return "webp";
+  return "png";
+}
+
 function buildIndex(): Record<string, Slice> {
   const spec = slicesSpec as unknown as SlicesSpec;
   const index: Record<string, Slice> = {};
@@ -66,7 +86,7 @@ function buildIndex(): Record<string, Slice> {
           scale,
           imgWidth: spec[device].width * scale,
           imgHeight: height * scale,
-          src: `/img/${device}/${name}.${SVG_SLICES.has(name) ? "svg" : "png"}`,
+          src: `/img/${device}/${name}.${extensionOf(name)}`,
         };
       });
     }
