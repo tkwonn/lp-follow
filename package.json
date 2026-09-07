@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "images": "python3 tools/pdf_slice.py docs/slices.json --scale=1 --out=public/img",
+    "images": "python3 tools/pdf_slice.py docs/slices.json --out=build/img && python3 tools/pdf_slice.py docs/slices.json --out=public/img",
     "verify": "node tools/verify/run.mjs",
     "serve": "python3 -m http.server 8080 -d out"
   },

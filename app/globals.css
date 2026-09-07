@@ -52,6 +52,17 @@ body {
 /* display は指定しない（.pc-only / .sp-only の display:none を上書きしないため）。 */
 .hit {
   position: absolute;
+  /* 矩形は --hx/--hy/--hw/--hh（calc(100% * デザイン px / 基準 px)）。
+     Chromium は % を float32 で解決して 1/64 px に切り捨てるので、round() 対応ブラウザでは 1/16 px に丸めて
+     基準幅で整数に着地させる。非対応ブラウザは 2 行目が無効になり 1 行目（丸めなし）が使われる。 */
+  left: var(--hx);
+  top: var(--hy);
+  width: var(--hw);
+  height: var(--hh);
+  left: round(nearest, var(--hx), 0.0625px);
+  top: round(nearest, var(--hy), 0.0625px);
+  width: round(nearest, var(--hw), 0.0625px);
+  height: round(nearest, var(--hh), 0.0625px);
   margin: 0;
   padding: 0;
   border: 0;

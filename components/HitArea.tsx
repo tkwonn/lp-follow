@@ -6,7 +6,7 @@ export type Rect = [x: number, y: number, w: number, h: number];
 /** 切り出し画像内のデザイン px 矩形を、その画像に対する % 配置スタイルへ変換する。 */
 export function hitStyle(sliceName: string, rect: Rect): CSSProperties {
   const s = slice(sliceName);
-  return pct(rect, s.width, s.height);
+  return pct(rect, s.width, s.height) as CSSProperties;
 }
 
 /** 見た目に何も足さない透明な当たり判定（button）。PC / SP の表示切替は親の切り出しに従う。 */

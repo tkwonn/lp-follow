@@ -12,15 +12,15 @@ function altOf(s: Slice): string {
 
 type Overlays = Record<string, ReactNode>;
 
-/** 1 枚の切り出し画像（PC / SP のどちらか専用）。 */
+/** 1 枚の切り出し画像（PC / SP のどちらか専用）。width/height は PNG の実寸（PC 3840 幅 = 2x）。 */
 function SingleSlice({ s, eager, overlay }: { s: Slice; eager: boolean; overlay?: ReactNode }) {
   const attrs = { [`data-slice-${s.device}`]: s.name } as Record<string, string>;
   return (
     <div className={`slice ${s.device}-only`} {...attrs}>
       <img
         src={s.src}
-        width={s.width}
-        height={s.height}
+        width={s.imgWidth}
+        height={s.imgHeight}
         alt={altOf(s)}
         loading={eager ? "eager" : "lazy"}
         decoding="sync"
@@ -37,11 +37,11 @@ function PairedSlice({ pc, sp, eager, overlay }: { pc: Slice; sp: Slice; eager: 
   return (
     <div className="slice" data-slice-pc={pc.name} data-slice-sp={sp.name}>
       <picture>
-        <source media={`(max-width: ${BREAKPOINT - 1}px)`} srcSet={sp.src} width={sp.width} height={sp.height} />
+        <source media={`(max-width: ${BREAKPOINT - 1}px)`} srcSet={sp.src} width={sp.imgWidth} height={sp.imgHeight} />
         <img
           src={pc.src}
-          width={pc.width}
-          height={pc.height}
+          width={pc.imgWidth}
+          height={pc.imgHeight}
           alt={alt}
           loading={eager ? "eager" : "lazy"}
           decoding="sync"

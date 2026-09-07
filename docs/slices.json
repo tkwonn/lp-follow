@@ -2,6 +2,7 @@
   "pc": {
     "pdf": "design/FOLLOW_LP_PC.pdf",
     "width": 1920,
+    "scale": 2,
     "pages": [
       {"page": 1, "frame": "PC-1", "height": 8826, "slices": [
         {"name": "header", "y0": 0, "y1": 120},
@@ -65,6 +66,7 @@
   "sp": {
     "pdf": "design/FOLLOW_LP_SP.pdf",
     "width": 750,
+    "scale": 1,
     "pages": [
       {"page": 1, "frame": "SP-1", "height": 9377, "slices": [
         {"name": "header", "y0": 0, "y1": 120},

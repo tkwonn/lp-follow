@@ -6,9 +6,9 @@
  *
  * 1. `next build`（--no-build で省略）
  * 2. out/ を静的配信
- * 3. Chromium（Playwright）で PC: 1920×DPR1 / SP: 375×DPR2 を開き、全画像の decode を待つ
+ * 3. Chromium（Playwright）で PC: 1920×DPR2（device 3840） / SP: 375×DPR2（device 750）を開き、全画像の decode を待つ
  * 4. lib/page.json で unit に属する各切り出し要素を device px で撮影し、
- *    build/img/<dev>/<slice>.png（pdftoppm 72dpi の正解）と pixelmatch(threshold 0) で比較
+ *    build/img/<dev>/<slice>.png（pdftocairo PC 144dpi / SP 72dpi の正解）と pixelmatch(threshold 0) で比較
  * 5. 隣接する切り出しの継ぎ目（±40px）を撮影し、正解画像の合成と比較
  * 6. 結果を docs/verify/<unit>/summary.json に記録。差分があれば .diff.png も保存
  *
@@ -40,7 +40,7 @@ const ONLY = opt("device");
 const SEAM = 40; // CSS px above/below a boundary
 
 const DEVICES = {
-  pc: { viewport: { width: 1920, height: 1080 }, dsf: 1 },
+  pc: { viewport: { width: 1920, height: 1080 }, dsf: 2 },
   sp: { viewport: { width: 375, height: 812 }, dsf: 2 },
 };
 
@@ -128,7 +128,7 @@ const summary = {
   date: new Date().toISOString(),
   commit,
   chromium: chromiumVersion,
-  method: "pixelmatch threshold=0 includeAA=true; reference = build/img (pdftoppm -r 72, 1pt=1px); element screenshot scale=device",
+  method: "pixelmatch threshold=0 includeAA=true; reference = build/img (pdftocairo -png; PC -r 144 = 3840px wide shown at CSS 1920 / DPR 2, SP -r 72 = 750px wide shown at CSS 375 / DPR 2); element screenshot scale=device",
   devices: {},
   pass: true,
 };

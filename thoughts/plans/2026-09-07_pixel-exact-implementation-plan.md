@@ -15,10 +15,13 @@ supersedes: tools/build_html.py ドラフト（静的 HTML 版）
 
 ## 2. 「一致」の定義（この定義でしか 0.000% は成立しない）
 
+**2026-09-07 改定（ユーザー承認）**: レンダラを `pdftoppm`（Splash）から **`pdftocairo`** に、PC の正解・配信画像を **144dpi（幅 3840px、CSS 1920 に 2x 表示）**に変更し、PC の比較も **DPR 2** にした。理由: Splash は stroke adjust がハードコード有効で 72dpi の細線が 2px/3px に不揃いになり、1x 画像は Retina で拡大されてぼける（`docs/verify/01-header-fv/render-analysis.md`、Codex 独立分析 `codex-render-analysis.md`）。
+
 | 項目 | PC | SP |
 |---|---|---|
-| 正解画像 | `design/FOLLOW_LP_PC.pdf` を `pdftoppm -r 72`（1pt=1px）で描画した PNG | `design/FOLLOW_LP_SP.pdf` を同条件で描画した PNG（幅 750） |
-| ブラウザ条件 | Chromium（Playwright）、viewport 幅 1920、DPR 1 | viewport 幅 375、DPR 2（device px 750） |
+| 正解画像 | `design/FOLLOW_LP_PC.pdf` を `pdftocairo -png -r 144`（1pt=2px、幅 3840）で描画した PNG | `design/FOLLOW_LP_SP.pdf` を `pdftocairo -png -r 72`（1pt=1px、幅 750）で描画した PNG |
+| 配信画像 | 同じ PNG を CSS 幅 1920 に表示（2x） | 同じ PNG を CSS 幅 375 に表示（2x） |
+| ブラウザ条件 | Chromium（Playwright）、viewport 幅 1920、DPR 2（device px 3840） | viewport 幅 375、DPR 2（device px 750） |
 | 撮影 | セクション要素の矩形を clip 撮影（＋境界をまたぐ帯で継ぎ目確認） | 同左 |
 | 比較 | `pixelmatch` threshold 0、AA 無視なし。差分画素数 / 総画素数 | 同左 |
 | 合格 | 差分画素 0 個（0.000%） | 同左 |
@@ -27,7 +30,8 @@ supersedes: tools/build_html.py ドラフト（静的 HTML 版）
 前提と制約:
 
 - **Figma のスクリーンショットは正解に使わない。** Figma と PDF はレンダラ差で既に 0.5〜4.8% 違う（`docs/compare/pngdiff-2026-09-07.jsonl`）。両方に対して 0.000% は原理的に不可能なので、`CLAUDE.md` の決定どおり PDF を唯一の正解にする。
-- **0.000% は基準幅・基準 DPR でのみ保証する。** それ以外の幅では同じ画像を比例縮小して表示する（再サンプリングが入るため差分ゼロにはならない。これは仕様として記録する）。
+- **0.000% は基準幅・基準 DPR でのみ保証する。** それ以外の幅では同じ画像を比例縮小して表示する（再サンプリングが入るため差分ゼロにはならない。これは仕様として記録する）。PC を DPR 1 の画面で見る場合も 2x 画像の縮小表示になるため 0.000% の対象外。
+- **切り出し境界はデザイン px で整数**、2x 素材ではその 2 倍（偶数）になる。`docs/slices.json` の `scale` が device ごとの倍率（PC 2 / SP 1）。当たり判定の % 配置はデザイン px 基準のまま（倍率に依存しない）。
 - **画面に見える画素はすべて PDF 切り出し PNG（可逆）から来る。** ブラウザにフォントを描かせない。CSS で色・線・角丸・影を描かない。`next/image` の最適化（再エンコード・リサイズ）は使わない（`unoptimized`）。
 - **切り出し境界はすべて整数 px、配置はすべて整数 px。** 小数座標は 1 画素のブレンドを生むので禁止。SP は device px（750 基準）で整数にする。
 - **固定要素（position: fixed / sticky）は基準状態では使わない。** 全ページ撮影で二重に写るため。ヘッダー固定・黒帯 CTA 固定が必要なら、撮影時は静的化するモードを用意する（要確認事項 2）。
@@ -46,12 +50,12 @@ supersedes: tools/build_html.py ドラフト（静的 HTML 版）
 ## 4. 技術構成
 
 - **Next.js**（App Router、TypeScript、`output: 'export'`、`images.unoptimized: true`）。成果物は `out/` の静的 HTML。サーバー不要で配置できる。
-- **画像**: `public/img/{pc,sp}/*.png`（`build/img` から生成、可逆 PNG）。必要なら 2 倍版は「別 DPR 用」ではなく作らない（SP は 750px 素材が既に 2 倍相当）。
+- **画像**: `public/img/{pc,sp}/*.png`（`build/img` と同一、可逆 PNG）。PC は 144dpi（3840px 幅）、SP は 72dpi（750px 幅）で、どちらも 2x 素材として表示する。PC 全体で約 64MB（旧 1x は 18MB）。
 - **レイアウト**: 各セクションは `width: 100%` の `<img>` を縦に積む。基準幅では 1:1。それ以外の幅では幅に比例して縮小。当たり判定は親要素に対する % 配置（幅・高さの比）。
 - **ブレークポイント**: 要確認事項 3。
 - **Python**: `tools/pdf_slice.py`（切り出し）、`tools/pngdiff.py`（Playwright が使えない時の予備）、FAQ 閉状態の期待画像合成、注記塗り。
 - **検証ハーネス**（Node）: `tools/verify/shot.mjs`（Playwright で撮影）、`tools/verify/diff.mjs`（pixelmatch）、`tools/verify/run.mjs --unit fv`（ビルド→配信→撮影→比較→JSON 記録を一括）。
-- **Codex 独立検証**: `tools/codex/verify-prompt.md` をテンプレートに、`codex exec --skip-git-repo-check -s workspace-write -o docs/verify/<unit>/codex.md - < prompt` で実行。Codex 自身に `run.mjs` を再実行させ、数値の一致・差分画像の確認・キーボード操作（Tab 順、Escape、Enter/Space で開閉）・ハンバーガー／FAQ 操作後のずれ確認・横スクロール有無を報告させる。
+- **Codex 独立検証**: `tools/codex/verify-prompt.md` をテンプレートに、`sh tools/codex/verify.sh <unit>`（`codex exec --skip-git-repo-check -s danger-full-access -o docs/verify/<unit>/codex.md`。`workspace-write` では listen EPERM・Chromium 起動拒否）で実行。Codex 自身に `run.mjs` を再実行させ、数値の一致・差分画像の確認・キーボード操作（Tab 順、Escape、Enter/Space で開閉）・ハンバーガー／FAQ 操作後のずれ確認・横スクロール有無を報告させる。
 
 ## 5. レビュー単位（ユーザー確認の区切り案）
 
@@ -104,7 +108,8 @@ PC と SP は同じ単位で同時に仕上げる。番号順に進める。
 
 ## 9. 既知のリスク
 
-- Chromium の色管理で PNG の画素値が変わる可能性 → パイロット（#1）で確認。変わる場合は `--force-color-profile=srgb` 等で固定し、条件を記録する。
+- Chromium の色管理で PNG の画素値が変わる可能性 → パイロット（#1）で確認済み。`--force-color-profile=srgb --disable-lcd-text --hide-scrollbars` で起動し、pdftocairo の PNG（sRGB チャンク付き・アルファなし）は PC 144dpi / SP 72dpi とも差分 0 画素。
+- 正解画像のラスタライザ自体が artefact を持つことがある（Splash の stroke adjust。#1 で発覚し `pdftocairo` へ変更）。「差分 0 = デザインどおり」ではなく、正解画像がデザインどおりかを別途目視で確認する。
 - Playwright の全ページ撮影は極端に高い（27,568px）ページで失敗することがある → セクション単位の clip 撮影 + 継ぎ目帯で代替。
 - 注記ボックス除去は PDF に「注記なし」の状態が無いため、塗り処理が必要。塗り後の画像を正解と定義し、範囲を記録する。
 - 商用フォントの Web 配信は行わない（画像化するため不要）。隠しテキストはシステムフォントで良い。

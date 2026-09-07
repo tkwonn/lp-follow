@@ -20,7 +20,10 @@ export function useMenu(): MenuState {
   return ctx;
 }
 
-/** ヘッダーのハンバーガー（開く）ボタン。展開図の重ね表示はユニット 02 で実装する。 */
+/**
+ * ヘッダーのハンバーガー（開く）ボタン。展開図の重ね表示はユニット 02 で実装する。
+ * `aria-controls` は参照先（メニュー要素）を実装する単位 02 で付ける（存在しない id を参照しない。Codex 指摘 2026-09-07）。
+ */
 export function MenuButton({ sliceName, rect }: { sliceName: string; rect: Rect }) {
   const { open, toggle } = useMenu();
   return (
@@ -29,7 +32,6 @@ export function MenuButton({ sliceName, rect }: { sliceName: string; rect: Rect 
       rect={rect}
       label={open ? "メニューを閉じる" : "メニューを開く"}
       aria-expanded={open}
-      aria-controls="site-menu"
       onClick={toggle}
     />
   );

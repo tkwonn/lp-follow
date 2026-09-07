@@ -1,0 +1,389 @@
+{
+  "chromium": "153.0.8010.12",
+  "summaryDevicesIdentical": true,
+  "implementationComparisons": [
+    {
+      "dev": "pc",
+      "name": "PC-1_01_header",
+      "size": [
+        3840,
+        240
+      ],
+      "diff": 0,
+      "rawDiff": 0,
+      "total": 921600
+    },
+    {
+      "dev": "pc",
+      "name": "PC-1_02_fv",
+      "size": [
+        3840,
+        1700
+      ],
+      "diff": 0,
+      "rawDiff": 0,
+      "total": 6528000
+    },
+    {
+      "dev": "sp",
+      "name": "SP-1_01_header",
+      "size": [
+        750,
+        120
+      ],
+      "diff": 0,
+      "rawDiff": 0,
+      "total": 90000
+    },
+    {
+      "dev": "sp",
+      "name": "SP-1_02_fv",
+      "size": [
+        750,
+        1200
+      ],
+      "diff": 0,
+      "rawDiff": 0,
+      "total": 900000
+    }
+  ],
+  "widths": [
+    {
+      "width": 1920,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "currentSrc": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png",
+      "errors": [],
+      "badResponses": [],
+      "failed": []
+    },
+    {
+      "width": 1366,
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "currentSrc": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png",
+      "errors": [],
+      "badResponses": [],
+      "failed": []
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "currentSrc": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png",
+      "errors": [],
+      "badResponses": [],
+      "failed": []
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "currentSrc": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png",
+      "errors": [],
+      "badResponses": [],
+      "failed": []
+    },
+    {
+      "width": 767,
+      "scrollWidth": 767,
+      "clientWidth": 767,
+      "currentSrc": "http://127.0.0.1:4198/img/sp/SP-1_01_header.png",
+      "errors": [],
+      "badResponses": [],
+      "failed": []
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "currentSrc": "http://127.0.0.1:4198/img/sp/SP-1_01_header.png",
+      "errors": [],
+      "badResponses": [],
+      "failed": []
+    },
+    {
+      "width": 320,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "currentSrc": "http://127.0.0.1:4198/img/sp/SP-1_01_header.png",
+      "errors": [],
+      "badResponses": [],
+      "failed": []
+    }
+  ],
+  "devices": {
+    "pc": {
+      "slices": [
+        {
+          "name": "PC-1_01_header",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 1920,
+            "height": 120
+          },
+          "expectedCssHeight": 120,
+          "size": [
+            3840,
+            240
+          ],
+          "diff": 0,
+          "rawDiff": 0,
+          "total": 921600
+        },
+        {
+          "name": "PC-1_02_fv",
+          "box": {
+            "x": 0,
+            "y": 120,
+            "width": 1920,
+            "height": 850
+          },
+          "expectedCssHeight": 850,
+          "size": [
+            3840,
+            1700
+          ],
+          "diff": 0,
+          "rawDiff": 0,
+          "total": 6528000
+        }
+      ],
+      "controls": [
+        {
+          "name": "メニューを開く",
+          "aria": "- button \"メニューを開く\"",
+          "box": {
+            "x": 1440,
+            "y": 24,
+            "width": 72,
+            "height": 75.984375
+          },
+          "normal": {
+            "outline": "rgba(0, 0, 0, 0) none 3px",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgba(0, 0, 0, 0)",
+            "tabIndex": 0,
+            "controls": "site-menu",
+            "targetExists": false
+          }
+        }
+      ],
+      "errors": [],
+      "badResponses": [],
+      "failed": [],
+      "count": 1,
+      "ariaSnapshot": "- main:\n  - img \"follow マシンピラティス／パーソナルセッション\"\n  - button \"メニューを開く\"\n  - img \"Change your life with a personal session. 運動が苦手な方に。健康なカラダを手に入れたい方に。パーソナルセッションなら、始めやすく続けやすい。しかも、スタジオ専門の follow なら間違いない。\"",
+      "tabFocus": {
+        "name": "メニューを開く",
+        "tag": "BUTTON",
+        "visible": true,
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "offset": "2px"
+      },
+      "expanded": [
+        "false",
+        "true",
+        "false",
+        "true"
+      ],
+      "openComparison": {
+        "size": [
+          3840,
+          240
+        ],
+        "diff": 0,
+        "rawDiff": 0,
+        "total": 921600
+      },
+      "debug": {
+        "class": "debug",
+        "outline": "rgba(255, 0, 0, 0.8) dashed 2px",
+        "background": "rgba(255, 0, 0, 0.12)"
+      }
+    },
+    "sp": {
+      "slices": [
+        {
+          "name": "SP-1_01_header",
+          "box": {
+            "x": 0,
+            "y": 0,
+            "width": 375,
+            "height": 60
+          },
+          "expectedCssHeight": 60,
+          "size": [
+            750,
+            120
+          ],
+          "diff": 0,
+          "rawDiff": 0,
+          "total": 90000
+        },
+        {
+          "name": "SP-1_02_fv",
+          "box": {
+            "x": 0,
+            "y": 60,
+            "width": 375,
+            "height": 600
+          },
+          "expectedCssHeight": 600,
+          "size": [
+            750,
+            1200
+          ],
+          "diff": 0,
+          "rawDiff": 0,
+          "total": 900000
+        }
+      ],
+      "controls": [
+        {
+          "name": "メニューを開く",
+          "aria": "- button \"メニューを開く\"",
+          "box": {
+            "x": 319.984375,
+            "y": 12,
+            "width": 48,
+            "height": 40
+          },
+          "normal": {
+            "outline": "rgba(0, 0, 0, 0) none 3px",
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgba(0, 0, 0, 0)",
+            "tabIndex": 0,
+            "controls": "site-menu",
+            "targetExists": false
+          }
+        }
+      ],
+      "errors": [],
+      "badResponses": [],
+      "failed": [],
+      "count": 1,
+      "ariaSnapshot": "- main:\n  - img \"follow マシンピラティス／パーソナルセッション\"\n  - button \"メニューを開く\"\n  - img \"Change your life with a personal session. 運動が苦手な方に。健康なカラダを手に入れたい方に。パーソナルセッションなら、始めやすく続けやすい。しかも、スタジオ専門の follow なら間違いない。\"",
+      "tabFocus": {
+        "name": "メニューを開く",
+        "tag": "BUTTON",
+        "visible": true,
+        "outline": "rgb(0, 95, 204) solid 3px",
+        "offset": "2px"
+      },
+      "expanded": [
+        "false",
+        "true",
+        "false",
+        "true"
+      ],
+      "openComparison": {
+        "size": [
+          750,
+          120
+        ],
+        "diff": 0,
+        "rawDiff": 0,
+        "total": 90000
+      },
+      "debug": {
+        "class": "debug",
+        "outline": "rgba(255, 0, 0, 0.8) dashed 2px",
+        "background": "rgba(255, 0, 0, 0.12)"
+      }
+    }
+  },
+  "hamburger": [
+    {
+      "label": "reference",
+      "measurement": "RGB < 128, x=2950, y=60..149; horizontal run at each first dark row",
+      "runs": [
+        {
+          "y0": 69,
+          "y1": 72,
+          "thickness": 4,
+          "x0": 2905,
+          "x1": 2992,
+          "length": 88
+        },
+        {
+          "y0": 101,
+          "y1": 104,
+          "thickness": 4,
+          "x0": 2904,
+          "x1": 2993,
+          "length": 90
+        },
+        {
+          "y0": 131,
+          "y1": 134,
+          "thickness": 4,
+          "x0": 2905,
+          "x1": 2992,
+          "length": 88
+        }
+      ]
+    },
+    {
+      "label": "implementation",
+      "measurement": "RGB < 128, x=2950, y=60..149; horizontal run at each first dark row",
+      "runs": [
+        {
+          "y0": 69,
+          "y1": 72,
+          "thickness": 4,
+          "x0": 2905,
+          "x1": 2992,
+          "length": 88
+        },
+        {
+          "y0": 101,
+          "y1": 104,
+          "thickness": 4,
+          "x0": 2904,
+          "x1": 2993,
+          "length": 90
+        },
+        {
+          "y0": 131,
+          "y1": 134,
+          "thickness": 4,
+          "x0": 2905,
+          "x1": 2992,
+          "length": 88
+        }
+      ]
+    },
+    {
+      "label": "independent",
+      "measurement": "RGB < 128, x=2950, y=60..149; horizontal run at each first dark row",
+      "runs": [
+        {
+          "y0": 69,
+          "y1": 72,
+          "thickness": 4,
+          "x0": 2905,
+          "x1": 2992,
+          "length": 88
+        },
+        {
+          "y0": 101,
+          "y1": 104,
+          "thickness": 4,
+          "x0": 2904,
+          "x1": 2993,
+          "length": 90
+        },
+        {
+          "y0": 131,
+          "y1": 134,
+          "thickness": 4,
+          "x0": 2905,
+          "x1": 2992,
+          "length": 88
+        }
+      ]
+    }
+  ]
+}

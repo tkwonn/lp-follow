@@ -1,16 +1,16 @@
 {
   "unit": "01-header-fv",
-  "date": "2026-09-07T09:12:35.088Z",
-  "commit": "7fc3256",
+  "date": "2026-09-07T10:04:52.302Z",
+  "commit": "68e4e41",
   "chromium": "153.0.8010.12",
-  "method": "pixelmatch threshold=0 includeAA=true; reference = build/img (pdftoppm -r 72, 1pt=1px); element screenshot scale=device",
+  "method": "pixelmatch threshold=0 includeAA=true; reference = build/img (pdftocairo -png; PC -r 144 = 3840px wide shown at CSS 1920 / DPR 2, SP -r 72 = 750px wide shown at CSS 375 / DPR 2); element screenshot scale=device",
   "devices": {
     "pc": {
       "viewport": {
         "width": 1920,
         "height": 1080
       },
-      "dsf": 1,
+      "dsf": 2,
       "scrollWidth": 1920,
       "clientWidth": 1920,
       "docHeight": 1080,
@@ -20,12 +20,12 @@
           "name": "PC-1_01_header",
           "ok": true,
           "diff": 0,
-          "total": 230400,
+          "total": 921600,
           "pct": 0,
           "sizeMismatch": false,
           "actualSize": [
-            1920,
-            120
+            3840,
+            240
           ],
           "box": {
             "x": 0,
@@ -39,12 +39,12 @@
           "name": "PC-1_02_fv",
           "ok": true,
           "diff": 0,
-          "total": 1632000,
+          "total": 6528000,
           "pct": 0,
           "sizeMismatch": false,
           "actualSize": [
-            1920,
-            850
+            3840,
+            1700
           ],
           "box": {
             "x": 0,
@@ -64,7 +64,7 @@
           "boundaryY": 120,
           "ok": true,
           "diff": 0,
-          "total": 153600,
+          "total": 614400,
           "pct": 0,
           "sizeMismatch": false
         }
