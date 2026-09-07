@@ -11,16 +11,16 @@ export type Slice = {
   y1: number;
   width: number; // デザイン px（PC 1920 / SP 750）。当たり判定の % 計算の基準
   height: number; // デザイン px
-  scale: number; // 画像の倍率（PC 2 = 144dpi、SP 1 = 72dpi）
-  imgWidth: number; // PNG の実寸 px（PC 3840 / SP 750）
+  scale: number; // 画像の倍率（docs/slices.json の scale。1 = 72dpi、2 = 144dpi。現在 PC 1 / SP 1）
+  imgWidth: number; // PNG の実寸 px（PC 1920 / SP 750）
   imgHeight: number;
   src: string; // /img/<device>/<name>.png
 };
 
 export const DESIGN_WIDTH: Record<Device, number> = { pc: 1920, sp: 750 };
 /**
- * 表示幅（CSS px）。PC は 3840px 素材（144dpi）を 1920 CSS px に、SP は 750px 素材（72dpi）を 375 CSS px に、
- * いずれも 2x で表示する（2026-09-07 改定）。
+ * 表示幅（CSS px）。PC は 1920px 素材を 1920 CSS px に 1x で、SP は 750px 素材を 375 CSS px に 2x で表示する。
+ * （PC 144dpi・2x 案は 2026-09-07 に試行後、ユーザー指示で 1x に戻した。）
  */
 export const CSS_WIDTH: Record<Device, number> = { pc: 1920, sp: 375 };
 export const BREAKPOINT = 768; // 768px 以上が PC

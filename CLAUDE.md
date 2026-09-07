@@ -42,8 +42,8 @@
 「似ている」ではなく「一致している」を目標にする。画素差分＝元デザイン画像とブラウザ撮影画像を重ねたときに異なる画素の割合。**0.000%＝1 画素も違わない。**
 
 - 考え方：「AI に再現させる」のをやめ、「デザインが持っている本物の画素を、正しい位置にそのまま置く」。AI に絵を描かせない。ブラウザに描かせるのは配置だけ。
-- 正解画像（**2026-09-07 改定、ユーザー承認**）：`design/*.pdf` を **`pdftocairo -png`** で描画した可逆 PNG。**PC は 144dpi（幅 3840px、CSS 幅 1920 に 2x で表示）、SP は 72dpi（幅 750px、CSS 幅 375 に 2x で表示）。** 旧条件（`pdftoppm -r 72`、PC 1x）は Splash レンダラの stroke adjust で細線幅が 2px/3px に不揃いになり、Retina では 1x 画像が拡大されてぼけるため廃止。根拠は `docs/verify/01-header-fv/render-analysis.md`（Codex 独立分析 `codex-render-analysis.md`）。Figma スクリーンショットは正解に使わない（PDF とレンダラ差がある）。
-- 比較条件：Chromium（Playwright）。**PC は viewport 幅 1920・DPR 2（device px 3840）**、SP は viewport 幅 375・DPR 2（device px 750）。`pixelmatch` threshold 0。差分画素 0 個で合格。条件と数値は `docs/verify/<unit>/` に記録する。DPR 1 の画面では 2x 画像を縮小表示するため 0.000% の対象外（仕様として記録）。
+- 正解画像（**2026-09-07 改定、ユーザー承認**）：`design/*.pdf` を **`pdftocairo -png -r 72`**（1pt=1px）で描画した可逆 PNG。PC は幅 1920px（CSS 幅 1920 に 1x 表示）、SP は幅 750px（CSS 幅 375 に 2x 表示）。レンダラを `pdftoppm`（Splash）から cairo に変えた理由は、Splash の stroke adjust で細線幅（ハンバーガー 3 本線）が 2px/3px に不揃いになるため。PC を 144dpi・2x にする案は一度実装したが、見た目の差が小さく容量が 3.5 倍になるためユーザー指示で 1x に戻した（2026-09-07 夜）。根拠は `docs/verify/01-header-fv/render-analysis.md`（Codex 独立分析 `codex-render-analysis.md`）。Figma スクリーンショットは正解に使わない（PDF とレンダラ差がある）。
+- 比較条件：Chromium（Playwright）。PC は viewport 幅 1920・DPR 1、SP は viewport 幅 375・DPR 2（device px 750）。`pixelmatch` threshold 0。差分画素 0 個で合格。条件と数値は `docs/verify/<unit>/` に記録する。PC を DPR 2 の画面で見ると 1x 画像が拡大補間されるため 0.000% の対象外（仕様として記録）。
 - 0.000% はこの基準幅・基準 DPR でのみ保証する。他の幅は同じ画像を比例拡縮して表示する（仕様として記録）。
 - 見える画素はすべて PDF 切り出し PNG から来る。ブラウザにフォントを描かせない。CSS で色・線・角丸・影を描かない。`next/image` の最適化は使わない。切り出し境界と配置はすべて整数 px。
 - 動的要素も画像の組み合わせで成立させる：ハンバーガーはメニュー展開図の画像を重ねる。CTA は透明な当たり判定のみ。Instructor は静的画像。

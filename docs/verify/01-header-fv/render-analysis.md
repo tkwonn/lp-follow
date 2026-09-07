@@ -74,3 +74,14 @@ A を採用する場合の作業: `tools/pdf_slice.py --scale=2`（PC のみ）�
 - ハンバーガー 3 本線（新正解 = 実装撮影、x 2906–2992 device px）: 行被覆 line1 `69:0.84 70–72:0.90 73:0.42`、line2 `100:0.24 101–104:0.90 105:0.12`、line3 `131:0.84 132–134:0.90 135:0.42`。**積分幅は 3 本とも 3.96 device px で等幅**（旧: 2/3/2 px）。AA 縁のグレー行を含み格子スナップなし。
 - クロップ画像: `crops/pc-hamburger-dpr2-x4.png`（新）、`crops/old-pc-hamburger-splash72-shown-at-dpr2.png`（旧、比較用）、`crops/pc-tagline-dpr2-x3.png`、`crops/pc-fv-heading-shadow-dpr2-x2.png`、`crops/sp-hamburger-dpr2-x4.png`。
 - 影: 2x 化で縁のにじみは解消。PDF と Figma の固有差（平均輝度差 −0.32）は残るため、ユーザーが見た具体箇所と表示条件を提出時に確認する。
+
+## 最終決定: cairo 72dpi・PC 1x・DPR 1（2026-09-07 夜、ユーザー指示）
+
+ユーザー確認の結果「DPR 2 化の前後で見た目にあまり差がない。ハンバーガーの修正だけ残して、それ以外は戻す」との指示。対策 B（レンダラ cairo）のみ採用し、対策 A（144dpi・DPR 2）は取り下げ。
+
+- 条件: `pdftocairo -png -r 72`（1pt=1px）。PC 1920px を CSS 1920 に 1x、SP 750px を CSS 375 に 2x。検証は PC DPR 1 / SP DPR 2。`docs/slices.json` の `scale` は PC/SP とも 1（2 にすれば 144dpi 素材に戻せる）。
+- 再検証（`summary.json`）: PC header 0/230,400、fv 0/1,632,000、継ぎ目 0/153,600。SP header 0/90,000、fv 0/900,000、継ぎ目 0/120,000。**すべて 0.000%**。
+- ハンバーガー 3 本線（cairo 72dpi、x 1453–1496）: line1 `34:0.42 35:0.90 36:0.66`、line2 `50:0.60 51:0.90 52:0.48`、line3 `65:0.42 66:0.90 67:0.66`。**積分幅は 3 本とも 1.98px で等幅**（Splash 72dpi は 2/3/2 px の全塗り）。クロップ `crops/pc-hamburger-cairo72-x8.png`。
+- 文字（タグライン）は Splash 72dpi と cairo 72dpi でインク被覆率 8.11% で同一。AA の分布だけがわずかに違う。クロップ `crops/pc-tagline-cairo72-x4.png`。
+- 144dpi 試行時のクロップは `crops-144dpi-trial/` に残す。容量: PC 18MB（144dpi 案 64MB）。
+- 当たり判定の端数対策（`calc` + CSS `round()`）と `aria-controls` の削除は維持。基準幅の矩形は PC `(1440,24,72,76)`、SP `(320,12,48,40)`。

@@ -11,7 +11,7 @@ slices.json:
   "sp": {"pdf": "design/FOLLOW_LP_SP.pdf", "width": 750, "scale": 1, "pages": [...]}
 }
 Output: <out>/<pc|sp>/<frame>_<nn>_<name>.png
-  scale 1 => 72dpi, 1 PDF pt = 1 px; scale 2 => 144dpi, 1 pt = 2 px (PC は 2x 素材を CSS 幅 1920 に表示)。
+  scale 1 => 72dpi, 1 PDF pt = 1 px; scale 2 => 144dpi, 1 pt = 2 px（2x 素材。現在は PC/SP とも 1）。
   scale は device ごとに slices.json の "scale" で指定する（既定 1）。--scale=N は全 device への上書き。
 Renderer: pdftocairo（2026-09-07 改定）。pdftoppm(Splash) は stroke adjust で細線幅が不揃いになるため使わない。
 Checks that slices in a page are contiguous and cover 0..height; prints gaps/overlaps.

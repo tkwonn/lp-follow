@@ -12,7 +12,7 @@ function altOf(s: Slice): string {
 
 type Overlays = Record<string, ReactNode>;
 
-/** 1 枚の切り出し画像（PC / SP のどちらか専用）。width/height は PNG の実寸（PC 3840 幅 = 2x）。 */
+/** 1 枚の切り出し画像（PC / SP のどちらか専用）。width/height は PNG の実寸。 */
 function SingleSlice({ s, eager, overlay }: { s: Slice; eager: boolean; overlay?: ReactNode }) {
   const attrs = { [`data-slice-${s.device}`]: s.name } as Record<string, string>;
   return (

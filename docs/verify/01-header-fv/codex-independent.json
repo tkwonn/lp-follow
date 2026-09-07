@@ -1,115 +1,166 @@
 {
-  "chromium": "153.0.8010.12",
-  "summaryDevicesIdentical": true,
-  "implementationComparisons": [
+  "comparisons": [
     {
+      "origin": "implementation",
       "dev": "pc",
-      "name": "PC-1_01_header",
+      "slice": "PC-1_01_header",
       "size": [
-        3840,
-        240
+        1920,
+        120
       ],
       "diff": 0,
-      "rawDiff": 0,
-      "total": 921600
+      "total": 230400,
+      "pct": 0,
+      "rawRGBA": 0
     },
     {
+      "origin": "rerun",
       "dev": "pc",
-      "name": "PC-1_02_fv",
+      "slice": "PC-1_01_header",
       "size": [
-        3840,
-        1700
+        1920,
+        120
       ],
       "diff": 0,
-      "rawDiff": 0,
-      "total": 6528000
+      "total": 230400,
+      "pct": 0,
+      "rawRGBA": 0
     },
     {
+      "origin": "implementation",
+      "dev": "pc",
+      "slice": "PC-1_02_fv",
+      "size": [
+        1920,
+        850
+      ],
+      "diff": 0,
+      "total": 1632000,
+      "pct": 0,
+      "rawRGBA": 0
+    },
+    {
+      "origin": "rerun",
+      "dev": "pc",
+      "slice": "PC-1_02_fv",
+      "size": [
+        1920,
+        850
+      ],
+      "diff": 0,
+      "total": 1632000,
+      "pct": 0,
+      "rawRGBA": 0
+    },
+    {
+      "origin": "implementation",
       "dev": "sp",
-      "name": "SP-1_01_header",
+      "slice": "SP-1_01_header",
       "size": [
         750,
         120
       ],
       "diff": 0,
-      "rawDiff": 0,
-      "total": 90000
+      "total": 90000,
+      "pct": 0,
+      "rawRGBA": 0
     },
     {
+      "origin": "rerun",
       "dev": "sp",
-      "name": "SP-1_02_fv",
+      "slice": "SP-1_01_header",
+      "size": [
+        750,
+        120
+      ],
+      "diff": 0,
+      "total": 90000,
+      "pct": 0,
+      "rawRGBA": 0
+    },
+    {
+      "origin": "implementation",
+      "dev": "sp",
+      "slice": "SP-1_02_fv",
       "size": [
         750,
         1200
       ],
       "diff": 0,
-      "rawDiff": 0,
-      "total": 900000
+      "total": 900000,
+      "pct": 0,
+      "rawRGBA": 0
+    },
+    {
+      "origin": "rerun",
+      "dev": "sp",
+      "slice": "SP-1_02_fv",
+      "size": [
+        750,
+        1200
+      ],
+      "diff": 0,
+      "total": 900000,
+      "pct": 0,
+      "rawRGBA": 0
     }
   ],
   "widths": [
     {
       "width": 1920,
+      "dpr": 1,
       "scrollWidth": 1920,
       "clientWidth": 1920,
-      "currentSrc": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png",
-      "errors": [],
-      "badResponses": [],
-      "failed": []
+      "bodyScrollWidth": 1920,
+      "image": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png"
     },
     {
       "width": 1366,
+      "dpr": 1,
       "scrollWidth": 1366,
       "clientWidth": 1366,
-      "currentSrc": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png",
-      "errors": [],
-      "badResponses": [],
-      "failed": []
+      "bodyScrollWidth": 1366,
+      "image": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png"
     },
     {
       "width": 1024,
+      "dpr": 1,
       "scrollWidth": 1024,
       "clientWidth": 1024,
-      "currentSrc": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png",
-      "errors": [],
-      "badResponses": [],
-      "failed": []
+      "bodyScrollWidth": 1024,
+      "image": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png"
     },
     {
       "width": 768,
+      "dpr": 1,
       "scrollWidth": 768,
       "clientWidth": 768,
-      "currentSrc": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png",
-      "errors": [],
-      "badResponses": [],
-      "failed": []
+      "bodyScrollWidth": 768,
+      "image": "http://127.0.0.1:4198/img/pc/PC-1_01_header.png"
     },
     {
       "width": 767,
+      "dpr": 1,
       "scrollWidth": 767,
       "clientWidth": 767,
-      "currentSrc": "http://127.0.0.1:4198/img/sp/SP-1_01_header.png",
-      "errors": [],
-      "badResponses": [],
-      "failed": []
+      "bodyScrollWidth": 767,
+      "image": "http://127.0.0.1:4198/img/sp/SP-1_01_header.png"
     },
     {
       "width": 375,
+      "dpr": 2,
       "scrollWidth": 375,
       "clientWidth": 375,
-      "currentSrc": "http://127.0.0.1:4198/img/sp/SP-1_01_header.png",
-      "errors": [],
-      "badResponses": [],
-      "failed": []
+      "bodyScrollWidth": 375,
+      "image": "http://127.0.0.1:4198/img/sp/SP-1_01_header.png"
     },
     {
       "width": 320,
+      "dpr": 1,
       "scrollWidth": 320,
       "clientWidth": 320,
-      "currentSrc": "http://127.0.0.1:4198/img/sp/SP-1_01_header.png",
-      "errors": [],
-      "badResponses": [],
-      "failed": []
+      "bodyScrollWidth": 320,
+      "image": "http://127.0.0.1:4198/img/sp/SP-1_01_header.png"
     }
   ],
   "devices": {
@@ -123,14 +174,16 @@
             "width": 1920,
             "height": 120
           },
-          "expectedCssHeight": 120,
+          "expectedCSSHeight": 120,
+          "subpixel": false,
           "size": [
-            3840,
-            240
+            1920,
+            120
           ],
           "diff": 0,
-          "rawDiff": 0,
-          "total": 921600
+          "total": 230400,
+          "pct": 0,
+          "rawRGBA": 0
         },
         {
           "name": "PC-1_02_fv",
@@ -140,67 +193,151 @@
             "width": 1920,
             "height": 850
           },
-          "expectedCssHeight": 850,
+          "expectedCSSHeight": 850,
+          "subpixel": false,
           "size": [
-            3840,
-            1700
+            1920,
+            850
           ],
           "diff": 0,
-          "rawDiff": 0,
-          "total": 6528000
+          "total": 1632000,
+          "pct": 0,
+          "rawRGBA": 0
         }
       ],
       "controls": [
         {
-          "name": "メニューを開く",
-          "aria": "- button \"メニューを開く\"",
-          "box": {
-            "x": 1440,
-            "y": 24,
-            "width": 72,
-            "height": 75.984375
-          },
           "normal": {
-            "outline": "rgba(0, 0, 0, 0) none 3px",
-            "background": "rgba(0, 0, 0, 0)",
-            "border": "0px none rgba(0, 0, 0, 0)",
+            "tag": "BUTTON",
+            "text": "メニューを開く",
             "tabIndex": 0,
-            "controls": "site-menu",
-            "targetExists": false
-          }
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "outlineColor": "rgba(0, 0, 0, 0)",
+            "outlineOffset": "0px",
+            "background": "rgba(0, 0, 0, 0)",
+            "box": {
+              "x": 1440,
+              "y": 24,
+              "width": 72,
+              "height": 76
+            },
+            "expanded": "false"
+          },
+          "accessible": "- button \"メニューを開く\""
         }
       ],
-      "errors": [],
-      "badResponses": [],
-      "failed": [],
-      "count": 1,
-      "ariaSnapshot": "- main:\n  - img \"follow マシンピラティス／パーソナルセッション\"\n  - button \"メニューを開く\"\n  - img \"Change your life with a personal session. 運動が苦手な方に。健康なカラダを手に入れたい方に。パーソナルセッションなら、始めやすく続けやすい。しかも、スタジオ専門の follow なら間違いない。\"",
-      "tabFocus": {
-        "name": "メニューを開く",
-        "tag": "BUTTON",
-        "visible": true,
-        "outline": "rgb(0, 95, 204) solid 3px",
-        "offset": "2px"
-      },
-      "expanded": [
-        "false",
-        "true",
-        "false",
-        "true"
+      "keyboard": [
+        {
+          "key": "Tab",
+          "active": {
+            "tag": "BUTTON",
+            "text": "メニューを開く",
+            "tabIndex": 0,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(0, 95, 204)",
+            "outlineOffset": "2px",
+            "background": "rgba(0, 0, 0, 0)",
+            "box": {
+              "x": 1440,
+              "y": 24,
+              "width": 72,
+              "height": 76
+            },
+            "expanded": "false"
+          },
+          "accessible": "- button \"メニューを開く\""
+        },
+        {
+          "key": "Enter",
+          "active": {
+            "tag": "BUTTON",
+            "text": "メニューを閉じる",
+            "tabIndex": 0,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(0, 95, 204)",
+            "outlineOffset": "2px",
+            "background": "rgba(0, 0, 0, 0)",
+            "box": {
+              "x": 1440,
+              "y": 24,
+              "width": 72,
+              "height": 76
+            },
+            "expanded": "true"
+          },
+          "accessible": "- button \"メニューを閉じる\" [expanded]"
+        },
+        {
+          "key": "Space",
+          "active": {
+            "tag": "BUTTON",
+            "text": "メニューを開く",
+            "tabIndex": 0,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(0, 95, 204)",
+            "outlineOffset": "2px",
+            "background": "rgba(0, 0, 0, 0)",
+            "box": {
+              "x": 1440,
+              "y": 24,
+              "width": 72,
+              "height": 76
+            },
+            "expanded": "false"
+          },
+          "accessible": "- button \"メニューを開く\""
+        }
       ],
-      "openComparison": {
+      "visibleControlCount": 1,
+      "mouseOpen": "true",
+      "openVisual": {
         "size": [
-          3840,
-          240
+          1920,
+          120
         ],
         "diff": 0,
-        "rawDiff": 0,
-        "total": 921600
+        "total": 230400,
+        "pct": 0,
+        "rawRGBA": 0
       },
+      "mouseClosed": "false",
       "debug": {
-        "class": "debug",
-        "outline": "rgba(255, 0, 0, 0.8) dashed 2px",
-        "background": "rgba(255, 0, 0, 0.12)"
+        "tag": "BUTTON",
+        "text": "メニューを開く",
+        "tabIndex": 0,
+        "outlineStyle": "dashed",
+        "outlineWidth": "2px",
+        "outlineColor": "rgba(255, 0, 0, 0.8)",
+        "outlineOffset": "0px",
+        "background": "rgba(255, 0, 0, 0.12)",
+        "box": {
+          "x": 1440,
+          "y": 24,
+          "width": 72,
+          "height": 76
+        },
+        "expanded": "false"
+      },
+      "normalAfterDebug": {
+        "tag": "BUTTON",
+        "text": "メニューを開く",
+        "tabIndex": 0,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "outlineOffset": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "box": {
+          "x": 1440,
+          "y": 24,
+          "width": 72,
+          "height": 76
+        },
+        "expanded": "false"
       }
     },
     "sp": {
@@ -213,14 +350,16 @@
             "width": 375,
             "height": 60
           },
-          "expectedCssHeight": 60,
+          "expectedCSSHeight": 60,
+          "subpixel": false,
           "size": [
             750,
             120
           ],
           "diff": 0,
-          "rawDiff": 0,
-          "total": 90000
+          "total": 90000,
+          "pct": 0,
+          "rawRGBA": 0
         },
         {
           "name": "SP-1_02_fv",
@@ -230,160 +369,328 @@
             "width": 375,
             "height": 600
           },
-          "expectedCssHeight": 600,
+          "expectedCSSHeight": 600,
+          "subpixel": false,
           "size": [
             750,
             1200
           ],
           "diff": 0,
-          "rawDiff": 0,
-          "total": 900000
+          "total": 900000,
+          "pct": 0,
+          "rawRGBA": 0
         }
       ],
       "controls": [
         {
-          "name": "メニューを開く",
-          "aria": "- button \"メニューを開く\"",
-          "box": {
-            "x": 319.984375,
-            "y": 12,
-            "width": 48,
-            "height": 40
-          },
           "normal": {
-            "outline": "rgba(0, 0, 0, 0) none 3px",
-            "background": "rgba(0, 0, 0, 0)",
-            "border": "0px none rgba(0, 0, 0, 0)",
+            "tag": "BUTTON",
+            "text": "メニューを開く",
             "tabIndex": 0,
-            "controls": "site-menu",
-            "targetExists": false
-          }
+            "outlineStyle": "none",
+            "outlineWidth": "3px",
+            "outlineColor": "rgba(0, 0, 0, 0)",
+            "outlineOffset": "0px",
+            "background": "rgba(0, 0, 0, 0)",
+            "box": {
+              "x": 320,
+              "y": 12,
+              "width": 48,
+              "height": 40
+            },
+            "expanded": "false"
+          },
+          "accessible": "- button \"メニューを開く\""
         }
       ],
-      "errors": [],
-      "badResponses": [],
-      "failed": [],
-      "count": 1,
-      "ariaSnapshot": "- main:\n  - img \"follow マシンピラティス／パーソナルセッション\"\n  - button \"メニューを開く\"\n  - img \"Change your life with a personal session. 運動が苦手な方に。健康なカラダを手に入れたい方に。パーソナルセッションなら、始めやすく続けやすい。しかも、スタジオ専門の follow なら間違いない。\"",
-      "tabFocus": {
-        "name": "メニューを開く",
-        "tag": "BUTTON",
-        "visible": true,
-        "outline": "rgb(0, 95, 204) solid 3px",
-        "offset": "2px"
-      },
-      "expanded": [
-        "false",
-        "true",
-        "false",
-        "true"
+      "keyboard": [
+        {
+          "key": "Tab",
+          "active": {
+            "tag": "BUTTON",
+            "text": "メニューを開く",
+            "tabIndex": 0,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(0, 95, 204)",
+            "outlineOffset": "2px",
+            "background": "rgba(0, 0, 0, 0)",
+            "box": {
+              "x": 320,
+              "y": 12,
+              "width": 48,
+              "height": 40
+            },
+            "expanded": "false"
+          },
+          "accessible": "- button \"メニューを開く\""
+        },
+        {
+          "key": "Enter",
+          "active": {
+            "tag": "BUTTON",
+            "text": "メニューを閉じる",
+            "tabIndex": 0,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(0, 95, 204)",
+            "outlineOffset": "2px",
+            "background": "rgba(0, 0, 0, 0)",
+            "box": {
+              "x": 320,
+              "y": 12,
+              "width": 48,
+              "height": 40
+            },
+            "expanded": "true"
+          },
+          "accessible": "- button \"メニューを閉じる\" [expanded]"
+        },
+        {
+          "key": "Space",
+          "active": {
+            "tag": "BUTTON",
+            "text": "メニューを開く",
+            "tabIndex": 0,
+            "outlineStyle": "solid",
+            "outlineWidth": "3px",
+            "outlineColor": "rgb(0, 95, 204)",
+            "outlineOffset": "2px",
+            "background": "rgba(0, 0, 0, 0)",
+            "box": {
+              "x": 320,
+              "y": 12,
+              "width": 48,
+              "height": 40
+            },
+            "expanded": "false"
+          },
+          "accessible": "- button \"メニューを開く\""
+        }
       ],
-      "openComparison": {
+      "visibleControlCount": 1,
+      "mouseOpen": "true",
+      "openVisual": {
         "size": [
           750,
           120
         ],
         "diff": 0,
-        "rawDiff": 0,
-        "total": 90000
+        "total": 90000,
+        "pct": 0,
+        "rawRGBA": 0
       },
+      "mouseClosed": "false",
       "debug": {
-        "class": "debug",
-        "outline": "rgba(255, 0, 0, 0.8) dashed 2px",
-        "background": "rgba(255, 0, 0, 0.12)"
+        "tag": "BUTTON",
+        "text": "メニューを開く",
+        "tabIndex": 0,
+        "outlineStyle": "dashed",
+        "outlineWidth": "2px",
+        "outlineColor": "rgba(255, 0, 0, 0.8)",
+        "outlineOffset": "0px",
+        "background": "rgba(255, 0, 0, 0.12)",
+        "box": {
+          "x": 320,
+          "y": 12,
+          "width": 48,
+          "height": 40
+        },
+        "expanded": "false"
+      },
+      "normalAfterDebug": {
+        "tag": "BUTTON",
+        "text": "メニューを開く",
+        "tabIndex": 0,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgba(0, 0, 0, 0)",
+        "outlineOffset": "0px",
+        "background": "rgba(0, 0, 0, 0)",
+        "box": {
+          "x": 320,
+          "y": 12,
+          "width": 48,
+          "height": 40
+        },
+        "expanded": "false"
       }
     }
   },
-  "hamburger": [
-    {
-      "label": "reference",
-      "measurement": "RGB < 128, x=2950, y=60..149; horizontal run at each first dark row",
-      "runs": [
-        {
-          "y0": 69,
-          "y1": 72,
-          "thickness": 4,
-          "x0": 2905,
-          "x1": 2992,
-          "length": 88
-        },
-        {
-          "y0": 101,
-          "y1": 104,
-          "thickness": 4,
-          "x0": 2904,
-          "x1": 2993,
-          "length": 90
-        },
-        {
-          "y0": 131,
-          "y1": 134,
-          "thickness": 4,
-          "x0": 2905,
-          "x1": 2992,
-          "length": 88
-        }
-      ]
-    },
-    {
-      "label": "implementation",
-      "measurement": "RGB < 128, x=2950, y=60..149; horizontal run at each first dark row",
-      "runs": [
-        {
-          "y0": 69,
-          "y1": 72,
-          "thickness": 4,
-          "x0": 2905,
-          "x1": 2992,
-          "length": 88
-        },
-        {
-          "y0": 101,
-          "y1": 104,
-          "thickness": 4,
-          "x0": 2904,
-          "x1": 2993,
-          "length": 90
-        },
-        {
-          "y0": 131,
-          "y1": 134,
-          "thickness": 4,
-          "x0": 2905,
-          "x1": 2992,
-          "length": 88
-        }
-      ]
-    },
-    {
-      "label": "independent",
-      "measurement": "RGB < 128, x=2950, y=60..149; horizontal run at each first dark row",
-      "runs": [
-        {
-          "y0": 69,
-          "y1": 72,
-          "thickness": 4,
-          "x0": 2905,
-          "x1": 2992,
-          "length": 88
-        },
-        {
-          "y0": 101,
-          "y1": 104,
-          "thickness": 4,
-          "x0": 2904,
-          "x1": 2993,
-          "length": 90
-        },
-        {
-          "y0": 131,
-          "y1": 134,
-          "thickness": 4,
-          "x0": 2905,
-          "x1": 2992,
-          "length": 88
-        }
-      ]
-    }
-  ]
+  "errors": [],
+  "responses404": [],
+  "failedRequests": [],
+  "chromium": "153.0.8010.12",
+  "hamburger": {
+    "reference": [
+      {
+        "rows": [
+          {
+            "y": 34,
+            "coverage": 18.584313725490194
+          },
+          {
+            "y": 35,
+            "coverage": 40.52549019607844
+          },
+          {
+            "y": 36,
+            "coverage": 29.309803921568644
+          }
+        ],
+        "totalCoverage": 88.41960784313727,
+        "effectiveThickness": 2.056269949840402
+      },
+      {
+        "rows": [
+          {
+            "y": 50,
+            "coverage": 26.639215686274525
+          },
+          {
+            "y": 51,
+            "coverage": 40.545098039215695
+          },
+          {
+            "y": 52,
+            "coverage": 21.243137254901942
+          }
+        ],
+        "totalCoverage": 88.42745098039217,
+        "effectiveThickness": 2.0564523483812134
+      },
+      {
+        "rows": [
+          {
+            "y": 65,
+            "coverage": 18.545098039215684
+          },
+          {
+            "y": 66,
+            "coverage": 40.52156862745099
+          },
+          {
+            "y": 67,
+            "coverage": 29.360784313725507
+          }
+        ],
+        "totalCoverage": 88.42745098039218,
+        "effectiveThickness": 2.0564523483812134
+      }
+    ],
+    "implementation": [
+      {
+        "rows": [
+          {
+            "y": 34,
+            "coverage": 18.584313725490194
+          },
+          {
+            "y": 35,
+            "coverage": 40.52549019607844
+          },
+          {
+            "y": 36,
+            "coverage": 29.309803921568644
+          }
+        ],
+        "totalCoverage": 88.41960784313727,
+        "effectiveThickness": 2.056269949840402
+      },
+      {
+        "rows": [
+          {
+            "y": 50,
+            "coverage": 26.639215686274525
+          },
+          {
+            "y": 51,
+            "coverage": 40.545098039215695
+          },
+          {
+            "y": 52,
+            "coverage": 21.243137254901942
+          }
+        ],
+        "totalCoverage": 88.42745098039217,
+        "effectiveThickness": 2.0564523483812134
+      },
+      {
+        "rows": [
+          {
+            "y": 65,
+            "coverage": 18.545098039215684
+          },
+          {
+            "y": 66,
+            "coverage": 40.52156862745099
+          },
+          {
+            "y": 67,
+            "coverage": 29.360784313725507
+          }
+        ],
+        "totalCoverage": 88.42745098039218,
+        "effectiveThickness": 2.0564523483812134
+      }
+    ],
+    "independent": [
+      {
+        "rows": [
+          {
+            "y": 34,
+            "coverage": 18.584313725490194
+          },
+          {
+            "y": 35,
+            "coverage": 40.52549019607844
+          },
+          {
+            "y": 36,
+            "coverage": 29.309803921568644
+          }
+        ],
+        "totalCoverage": 88.41960784313727,
+        "effectiveThickness": 2.056269949840402
+      },
+      {
+        "rows": [
+          {
+            "y": 50,
+            "coverage": 26.639215686274525
+          },
+          {
+            "y": 51,
+            "coverage": 40.545098039215695
+          },
+          {
+            "y": 52,
+            "coverage": 21.243137254901942
+          }
+        ],
+        "totalCoverage": 88.42745098039217,
+        "effectiveThickness": 2.0564523483812134
+      },
+      {
+        "rows": [
+          {
+            "y": 65,
+            "coverage": 18.545098039215684
+          },
+          {
+            "y": 66,
+            "coverage": 40.52156862745099
+          },
+          {
+            "y": 67,
+            "coverage": 29.360784313725507
+          }
+        ],
+        "totalCoverage": 88.42745098039218,
+        "effectiveThickness": 2.0564523483812134
+      }
+    ]
+  },
+  "summaryDevicesEqual": true,
+  "summaryPassEqual": true
 }

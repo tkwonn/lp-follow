@@ -2,7 +2,7 @@
   "pc": {
     "pdf": "design/FOLLOW_LP_PC.pdf",
     "width": 1920,
-    "scale": 2,
+    "scale": 1,
     "pages": [
       {"page": 1, "frame": "PC-1", "height": 8826, "slices": [
         {"name": "header", "y0": 0, "y1": 120},
