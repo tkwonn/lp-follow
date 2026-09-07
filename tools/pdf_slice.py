@@ -33,15 +33,25 @@ def main():
         os.makedirs(f"{out}/{key}", exist_ok=True)
         w = dev["width"]
         print(f"[{key}] pdftocairo -r {dpi} (scale {scale}, width {w * scale}px)")
+        # 表示 DPR（PC 1 / SP 2）。SP は 750px 素材を CSS 375px に 2x で表示するため、
+        # ページを積み上げた累積 y（device px）が全境界で dpr の倍数でないと CSS 位置が .5px になり、
+        # Chromium が整数 CSS px に丸めて 1 device px ずれる／拡縮される。"standalone" のページ（メニュー展開図）は累積に含めない。
+        dpr = int(dev.get("dpr", 1)) * scale
+        cum = 0
         for pg in dev["pages"]:
             slices = pg["slices"]
             prev = 0
+            base = 0 if pg.get("standalone") else cum
+            if base % dpr:
+                print(f"  ! {pg['frame']} starts at cumulative {base} (not a multiple of dpr {dpr}): page boundary must be merged into one slice")
             for i, s in enumerate(slices):
                 if abs(s["y0"] - prev) > 0.6:
                     print(f"  ! {pg['frame']} gap/overlap before {s['name']}: prev end {prev} -> y0 {s['y0']}")
                 prev = s["y1"]
                 if s["y0"] != int(s["y0"]) or s["y1"] != int(s["y1"]):
                     print(f"  ! {pg['frame']} {s['name']}: non-integer boundary {s['y0']}-{s['y1']}")
+                if (base + int(s["y0"]) * scale) % dpr or (int(s["y1"]) - int(s["y0"])) * scale % dpr:
+                    print(f"  ! {pg['frame']} {s['name']}: boundary {s['y0']}-{s['y1']} not aligned to dpr {dpr} (cumulative start {base})")
                 y0 = int(s["y0"]) * scale
                 y1 = int(s["y1"]) * scale
                 name = f"{pg['frame']}_{i + 1:02d}_{s['name']}"
@@ -53,6 +63,8 @@ def main():
                 print(f"  {name}.png  y {s['y0']}-{s['y1']} ({w * scale}x{y1 - y0}px)")
             if abs(prev - pg["height"]) > 0.6:
                 print(f"  ! {pg['frame']} last slice ends at {prev}, page height {pg['height']}")
+            if not pg.get("standalone"):
+                cum += int(pg["height"]) * scale
 
 
 if __name__ == "__main__":

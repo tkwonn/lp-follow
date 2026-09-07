@@ -1,6 +1,7 @@
 {
   "pc": {
     "pdf": "design/FOLLOW_LP_PC.pdf",
+    "dpr": 1,
     "width": 1920,
     "scale": 1,
     "pages": [
@@ -58,31 +59,32 @@
         {"name": "map", "y0": 9420, "y1": 9948},
         {"name": "footer-cta", "y0": 9948, "y1": 10107}
       ]},
-      {"page": 4, "frame": "PC-Menu", "height": 1000, "slices": [
+      {"page": 4, "frame": "PC-Menu", "height": 1000, "standalone": true, "slices": [
         {"name": "menu", "y0": 0, "y1": 1000}
       ]}
     ]
   },
   "sp": {
     "pdf": "design/FOLLOW_LP_SP.pdf",
+    "dpr": 2,
     "width": 750,
     "scale": 1,
     "pages": [
       {"page": 1, "frame": "SP-1", "height": 9377, "slices": [
         {"name": "header", "y0": 0, "y1": 120},
         {"name": "fv", "y0": 120, "y1": 1320},
-        {"name": "point01", "y0": 1320, "y1": 1745},
-        {"name": "point02", "y0": 1745, "y1": 2248},
+        {"name": "point01", "y0": 1320, "y1": 1746},
+        {"name": "point02", "y0": 1746, "y1": 2248},
         {"name": "point03", "y0": 2248, "y1": 2678},
         {"name": "trial-banner", "y0": 2678, "y1": 3306},
         {"name": "campaign", "y0": 3306, "y1": 4270},
-        {"name": "gap", "y0": 4270, "y1": 4373},
-        {"name": "session", "y0": 4373, "y1": 5222},
+        {"name": "gap", "y0": 4270, "y1": 4372},
+        {"name": "session", "y0": 4372, "y1": 5222},
         {"name": "target", "y0": 5222, "y1": 6464},
         {"name": "effects", "y0": 6464, "y1": 7380},
         {"name": "gap", "y0": 7380, "y1": 7452},
-        {"name": "requests", "y0": 7452, "y1": 9003},
-        {"name": "closing", "y0": 9003, "y1": 9377}
+        {"name": "requests", "y0": 7452, "y1": 9002},
+        {"name": "closing", "y0": 9002, "y1": 9377}
       ]},
       {"page": 2, "frame": "SP-2", "height": 9353, "slices": [
         {"name": "trial-banner-2", "y0": 0, "y1": 689},
@@ -97,9 +99,9 @@
         {"name": "step04", "y0": 4093, "y1": 4593},
         {"name": "arrow", "y0": 4593, "y1": 4729},
         {"name": "step05", "y0": 4729, "y1": 5229},
-        {"name": "gap", "y0": 5229, "y1": 5298},
-        {"name": "campaign", "y0": 5298, "y1": 6262},
-        {"name": "gap", "y0": 6262, "y1": 6383},
+        {"name": "gap", "y0": 5229, "y1": 5297},
+        {"name": "campaign", "y0": 5297, "y1": 6261},
+        {"name": "gap", "y0": 6261, "y1": 6383},
         {"name": "plan-heading", "y0": 6383, "y1": 6683},
         {"name": "plans", "y0": 6683, "y1": 9353}
       ]},
@@ -111,20 +113,20 @@
         {"name": "facility-intro", "y0": 1538, "y1": 2310},
         {"name": "facility-photos", "y0": 2310, "y1": 3140},
         {"name": "studios", "y0": 3140, "y1": 4946},
-        {"name": "yoga", "y0": 4946, "y1": 5983},
-        {"name": "pilates", "y0": 5983, "y1": 6841},
-        {"name": "frp", "y0": 6841, "y1": 7535},
-        {"name": "hammock", "y0": 7535, "y1": 8557}
+        {"name": "yoga", "y0": 4946, "y1": 5982},
+        {"name": "pilates", "y0": 5982, "y1": 6840},
+        {"name": "frp", "y0": 6840, "y1": 7534},
+        {"name": "hammock", "y0": 7534, "y1": 8557}
       ]},
       {"page": 4, "frame": "SP-4", "height": 6018, "slices": [
-        {"name": "faq-heading", "y0": 0, "y1": 250},
-        {"name": "faq-ref", "y0": 250, "y1": 4531},
+        {"name": "faq-heading", "y0": 0, "y1": 251},
+        {"name": "faq-ref", "y0": 251, "y1": 4531},
         {"name": "access-heading", "y0": 4531, "y1": 4809},
         {"name": "access-info", "y0": 4809, "y1": 5489},
         {"name": "map", "y0": 5489, "y1": 5845},
         {"name": "footer-cta", "y0": 5845, "y1": 6018}
       ]},
-      {"page": 5, "frame": "SP-Menu", "height": 1400, "slices": [
+      {"page": 5, "frame": "SP-Menu", "height": 1400, "standalone": true, "slices": [
         {"name": "menu", "y0": 0, "y1": 1400}
       ]}
     ]

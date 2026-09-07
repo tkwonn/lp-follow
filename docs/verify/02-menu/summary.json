@@ -1,7 +1,7 @@
 {
   "unit": "02-menu",
-  "date": "2026-09-07T10:36:29.716Z",
-  "commit": "d7c18b0",
+  "date": "2026-09-07T10:58:49.213Z",
+  "commit": "8cd74f4",
   "chromium": "153.0.8010.12",
   "method": "pixelmatch threshold=0 includeAA=true; reference = build/img (pdftocairo -png -r 72, 1pt=1px; PC 1920px wide shown at CSS 1920 / DPR 1, SP 750px wide shown at CSS 375 / DPR 2); element screenshot scale=device",
   "devices": {

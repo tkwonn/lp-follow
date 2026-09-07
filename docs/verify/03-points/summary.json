@@ -1,0 +1,226 @@
+{
+  "unit": "03-points",
+  "date": "2026-09-07T10:58:43.785Z",
+  "commit": "8cd74f4",
+  "chromium": "153.0.8010.12",
+  "method": "pixelmatch threshold=0 includeAA=true; reference = build/img (pdftocairo -png -r 72, 1pt=1px; PC 1920px wide shown at CSS 1920 / DPR 1, SP 750px wide shown at CSS 375 / DPR 2); element screenshot scale=device",
+  "devices": {
+    "pc": {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "dsf": 1,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "docHeight": 2418,
+      "consoleErrors": [],
+      "slices": [
+        {
+          "name": "PC-1_03_point01",
+          "ok": true,
+          "diff": 0,
+          "total": 864000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            1920,
+            450
+          ],
+          "box": {
+            "x": 0,
+            "y": 970,
+            "w": 1920,
+            "h": 450
+          },
+          "subpixel": false
+        },
+        {
+          "name": "PC-1_04_point02",
+          "ok": true,
+          "diff": 0,
+          "total": 1052160,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            1920,
+            548
+          ],
+          "box": {
+            "x": 0,
+            "y": 1420,
+            "w": 1920,
+            "h": 548
+          },
+          "subpixel": false
+        },
+        {
+          "name": "PC-1_05_point03",
+          "ok": true,
+          "diff": 0,
+          "total": 864000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            1920,
+            450
+          ],
+          "box": {
+            "x": 0,
+            "y": 1968,
+            "w": 1920,
+            "h": 450
+          },
+          "subpixel": false
+        }
+      ],
+      "seams": [
+        {
+          "between": [
+            "PC-1_02_fv",
+            "PC-1_03_point01"
+          ],
+          "boundaryY": 970,
+          "ok": true,
+          "diff": 0,
+          "total": 153600,
+          "pct": 0,
+          "sizeMismatch": false
+        },
+        {
+          "between": [
+            "PC-1_03_point01",
+            "PC-1_04_point02"
+          ],
+          "boundaryY": 1420,
+          "ok": true,
+          "diff": 0,
+          "total": 153600,
+          "pct": 0,
+          "sizeMismatch": false
+        },
+        {
+          "between": [
+            "PC-1_04_point02",
+            "PC-1_05_point03"
+          ],
+          "boundaryY": 1968,
+          "ok": true,
+          "diff": 0,
+          "total": 153600,
+          "pct": 0,
+          "sizeMismatch": false
+        }
+      ]
+    },
+    "sp": {
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dsf": 2,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "docHeight": 1339,
+      "consoleErrors": [],
+      "slices": [
+        {
+          "name": "SP-1_03_point01",
+          "ok": true,
+          "diff": 0,
+          "total": 319500,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            750,
+            426
+          ],
+          "box": {
+            "x": 0,
+            "y": 660,
+            "w": 375,
+            "h": 213
+          },
+          "subpixel": false
+        },
+        {
+          "name": "SP-1_04_point02",
+          "ok": true,
+          "diff": 0,
+          "total": 376500,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            750,
+            502
+          ],
+          "box": {
+            "x": 0,
+            "y": 873,
+            "w": 375,
+            "h": 251
+          },
+          "subpixel": false
+        },
+        {
+          "name": "SP-1_05_point03",
+          "ok": true,
+          "diff": 0,
+          "total": 322500,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            750,
+            430
+          ],
+          "box": {
+            "x": 0,
+            "y": 1124,
+            "w": 375,
+            "h": 215
+          },
+          "subpixel": false
+        }
+      ],
+      "seams": [
+        {
+          "between": [
+            "SP-1_02_fv",
+            "SP-1_03_point01"
+          ],
+          "boundaryY": 660,
+          "ok": true,
+          "diff": 0,
+          "total": 120000,
+          "pct": 0,
+          "sizeMismatch": false
+        },
+        {
+          "between": [
+            "SP-1_03_point01",
+            "SP-1_04_point02"
+          ],
+          "boundaryY": 873,
+          "ok": true,
+          "diff": 0,
+          "total": 120000,
+          "pct": 0,
+          "sizeMismatch": false
+        },
+        {
+          "between": [
+            "SP-1_04_point02",
+            "SP-1_05_point03"
+          ],
+          "boundaryY": 1124,
+          "ok": true,
+          "diff": 0,
+          "total": 120000,
+          "pct": 0,
+          "sizeMismatch": false
+        }
+      ]
+    }
+  },
+  "pass": true
+}

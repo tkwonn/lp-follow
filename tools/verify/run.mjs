@@ -408,7 +408,10 @@ for (const dev of Object.keys(DEVICES)) {
       continue;
     }
     await loc.scrollIntoViewIfNeeded();
-    const box = await loc.boundingBox();
+    // boundingBox() は viewport 相対。スクロール後はページ相対に直す（継ぎ目の fullPage clip と summary の box 用）
+    const vbox = await loc.boundingBox();
+    const scroll = await page.evaluate(() => ({ x: window.scrollX, y: window.scrollY }));
+    const box = { x: vbox.x + scroll.x, y: vbox.y + scroll.y, width: vbox.width, height: vbox.height };
     boxes[name] = box;
     refs[name] = readPng(path.join(ROOT, "build/img", dev, `${name}.png`));
     if (!names.includes(name)) continue; // prev slice: box only
