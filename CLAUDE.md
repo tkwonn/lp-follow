@@ -35,7 +35,7 @@
 - 座標・ノードID・スクリーンショット：Figma MCP（`get_metadata` / `get_screenshot`）。取得結果は `docs/` に保存して再取得しない。9 フレーム分の `get_metadata` は `docs/figma-meta/<frame>.xml` に保存済み（2026-09-07）。要約は `python3 tools/figma_meta_outline.py`。
 - 文字列・フォント・字間：PDF から取得する。Figmaにはテキストノードが無いため使えない。`pdftotext -bbox-layout` の結果を `docs/pdf-text/<page>.xml`（行一覧 `*.lines.txt`、`python3 tools/pdf_text_lines.py`）、フォント・色は `pdftohtml -xml` の結果を `docs/pdf-text/fonts/` に保存済み。
 - セクション境界・CTA 矩形・FAQ 行・メニュー項目の台帳：`docs/sections.md`。PDF 切り出しの定義は `docs/slices.json`、実行は `python3 tools/pdf_slice.py docs/slices.json --scale=1 --out=build/img`（出力 `build/img/{pc,sp}/`）。
-- Codex は素材監査・独立検証、Claude Code は実装を担当する（`docs/codex-review-2026-09-07.md` 参照）。Codex の呼び出しは `codex exec --skip-git-repo-check -s <sandbox> -o <out.md> - < prompt.md`（モデルは設定既定の `gpt-6-astra` のみ）。
+- Codex は素材監査・独立検証、Claude Code は実装を担当する（`docs/codex-review-2026-09-07.md` 参照）。Codex の呼び出しは `codex exec --skip-git-repo-check -s <sandbox> -o <out.md> - < prompt.md`（モデルは設定既定の `gpt-6-astra` のみ）。ブラウザ検証は `sh tools/codex/verify.sh <unit>`。sandbox は `danger-full-access` が必要（`workspace-write` では listen EPERM・Chromium 起動拒否）。パイプで `head` に繋ぐと SIGPIPE で途中終了するので、出力はファイルに落とす。
 
 ## 再現度の基準：画素差分 0.000%（2026-09-07 ユーザー指示）
 
