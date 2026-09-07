@@ -1,0 +1,7 @@
+{
+  "comment": "ページ構成の唯一のソース。上から順に積む。pc/sp は docs/slices.json の切り出し名（<frame>_<nn>_<name>）。unit は thoughts/plans の §5 レビュー単位。",
+  "sections": [
+    { "id": "header", "unit": "01-header-fv", "pc": ["PC-1_01_header"], "sp": ["SP-1_01_header"] },
+    { "id": "top", "unit": "01-header-fv", "pc": ["PC-1_02_fv"], "sp": ["SP-1_02_fv"] }
+  ]
+}

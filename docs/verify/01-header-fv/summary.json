@@ -1,0 +1,140 @@
+{
+  "unit": "01-header-fv",
+  "date": "2026-09-07T09:02:03.168Z",
+  "commit": "d70849e",
+  "chromium": "153.0.8010.12",
+  "method": "pixelmatch threshold=0 includeAA=true; reference = build/img (pdftoppm -r 72, 1pt=1px); element screenshot scale=device",
+  "devices": {
+    "pc": {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "dsf": 1,
+      "scrollWidth": 1920,
+      "clientWidth": 1920,
+      "docHeight": 1080,
+      "consoleErrors": [],
+      "slices": [
+        {
+          "name": "PC-1_01_header",
+          "ok": true,
+          "diff": 0,
+          "total": 230400,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            1920,
+            120
+          ],
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 1920,
+            "h": 120
+          },
+          "subpixel": false
+        },
+        {
+          "name": "PC-1_02_fv",
+          "ok": true,
+          "diff": 0,
+          "total": 1632000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            1920,
+            850
+          ],
+          "box": {
+            "x": 0,
+            "y": 120,
+            "w": 1920,
+            "h": 850
+          },
+          "subpixel": false
+        }
+      ],
+      "seams": [
+        {
+          "between": [
+            "PC-1_01_header",
+            "PC-1_02_fv"
+          ],
+          "boundaryY": 120,
+          "ok": true,
+          "diff": 0,
+          "total": 153600,
+          "pct": 0,
+          "sizeMismatch": false
+        }
+      ]
+    },
+    "sp": {
+      "viewport": {
+        "width": 375,
+        "height": 812
+      },
+      "dsf": 2,
+      "scrollWidth": 375,
+      "clientWidth": 375,
+      "docHeight": 812,
+      "consoleErrors": [],
+      "slices": [
+        {
+          "name": "SP-1_01_header",
+          "ok": true,
+          "diff": 0,
+          "total": 90000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            750,
+            120
+          ],
+          "box": {
+            "x": 0,
+            "y": 0,
+            "w": 375,
+            "h": 60
+          },
+          "subpixel": false
+        },
+        {
+          "name": "SP-1_02_fv",
+          "ok": true,
+          "diff": 0,
+          "total": 900000,
+          "pct": 0,
+          "sizeMismatch": false,
+          "actualSize": [
+            750,
+            1200
+          ],
+          "box": {
+            "x": 0,
+            "y": 60,
+            "w": 375,
+            "h": 600
+          },
+          "subpixel": false
+        }
+      ],
+      "seams": [
+        {
+          "between": [
+            "SP-1_01_header",
+            "SP-1_02_fv"
+          ],
+          "boundaryY": 60,
+          "ok": true,
+          "diff": 0,
+          "total": 120000,
+          "pct": 0,
+          "sizeMismatch": false
+        }
+      ]
+    }
+  },
+  "pass": true
+}

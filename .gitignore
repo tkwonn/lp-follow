@@ -6,3 +6,6 @@ __pycache__/
 *.log
 .DS_Store
 test-results/
+next-env.d.ts
+tsconfig.tsbuildinfo
+public/img/

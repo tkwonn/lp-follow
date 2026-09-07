@@ -1,0 +1,87 @@
+/* 画素一致のための最小 CSS。色・線・角丸・影は描かない。 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* LP 本体。PC は 1920px を上限に中央寄せ、それ未満は幅に比例して縮小。 */
+.lp {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
+/* 1 切り出し = 1 画像。幅 100%・高さ自動で、基準幅では 1:1 になる。 */
+.slice {
+  position: relative;
+  display: block;
+  line-height: 0;
+}
+.slice > img,
+.slice > picture > img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* PC / SP の切り替え（768px 以上が PC） */
+.pc-only {
+  display: block;
+}
+.sp-only {
+  display: none;
+}
+@media (max-width: 767px) {
+  .pc-only {
+    display: none;
+  }
+  .sp-only {
+    display: block;
+  }
+}
+
+/* 当たり判定。見た目には何も足さない。 */
+.hit {
+  position: absolute;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: transparent;
+  font: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+}
+.hit:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 2px;
+}
+/* ?debug=1 で矩形を可視化 */
+html.debug .hit {
+  outline: 2px dashed rgba(255, 0, 0, 0.8);
+  background: rgba(255, 0, 0, 0.12);
+}
+
+/* 読み上げ専用テキスト */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
