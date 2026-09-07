@@ -49,9 +49,9 @@ body {
 }
 
 /* 当たり判定。見た目には何も足さない。 */
+/* display は指定しない（.pc-only / .sp-only の display:none を上書きしないため）。 */
 .hit {
   position: absolute;
-  display: block;
   margin: 0;
   padding: 0;
   border: 0;

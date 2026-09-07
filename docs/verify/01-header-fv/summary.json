@@ -1,7 +1,7 @@
 {
   "unit": "01-header-fv",
-  "date": "2026-09-07T09:02:03.168Z",
-  "commit": "d70849e",
+  "date": "2026-09-07T09:12:35.088Z",
+  "commit": "7fc3256",
   "chromium": "153.0.8010.12",
   "method": "pixelmatch threshold=0 includeAA=true; reference = build/img (pdftoppm -r 72, 1pt=1px); element screenshot scale=device",
   "devices": {
